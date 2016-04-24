@@ -1,0 +1,7 @@
+platform:ios,'7.0'
+pod 'AFNetworking', '~>3.0.0'
+pod 'FMDB'
+pod 'JSONModel'
+pod 'MJRefresh'
+pod 'SDWebImage', '~>3.7'
+pod 'Masonry'
