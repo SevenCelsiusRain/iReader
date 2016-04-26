@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SCCusTabBarController.h"
+
 
 @interface AppDelegate ()
 
@@ -16,7 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    SCCusTabBarController *tabBar = [[SCCusTabBarController alloc] init];
+    
+    self.window.rootViewController = tabBar;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
