@@ -20,8 +20,14 @@ typedef NS_ENUM(NSInteger, NetWorkState){
 
 @interface SCNetWorkAFRequest : NSObject
 
-#warning 1、判断网络状态；2、封装get、post请求
+/***
+ 判断网络状态
+ */
++ (NetWorkState) isNetWorkReach;
 
-+ (id) isNetWorkReach;
+/***
+ 请求网络数据
+ */
++ (void) netRequestWithURL:(NSString *)urlStr params:(NSDictionary *)params success:(void(^)(NSDictionary *dict))success failure:(void(^)(NSError *error))failure isGet:(BOOL)isGet;
 
 @end

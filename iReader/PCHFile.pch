@@ -9,9 +9,17 @@
 #ifndef PCHFile_pch
 #define PCHFile_pch
 
-#import "URLStr.h"
-#import "Masonry.h"
+#import "URLStr.h" // URL定义
+
+#import "Masonry.h"  // 屏幕适配
+
 #import "UIBarButtonItem+SCExtension.h"
 
+// 网络请求
+#import "SCNetWorkImage.h"
+#import "SCNetWorkAFRequest.h"
+
+// 网络请求常量类
+#import "SCNetAPI.h"
 
 #endif /* PCHFile_pch */

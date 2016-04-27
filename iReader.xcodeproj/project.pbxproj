@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031DB0ED1CCFEF2A0084EB1D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0EC1CCFEF2A0084EB1D /* Reachability.m */; };
+		031DB0F01CCFEFB30084EB1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 031DB0EF1CCFEFB30084EB1D /* SystemConfiguration.framework */; };
+		031DB0F31CD03D0A0084EB1D /* SCHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0F21CD03D0A0084EB1D /* SCHomeModel.m */; };
+		031DB0F61CD0402A0084EB1D /* SCHomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0F51CD0402A0084EB1D /* SCHomeCollectionCell.m */; };
+		031DB0F81CD0406D0084EB1D /* SCHomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031DB0F71CD0406D0084EB1D /* SCHomeCollectionCell.xib */; };
+		031DB0FB1CD0433C0084EB1D /* SCReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0FA1CD0433C0084EB1D /* SCReadingModel.m */; };
+		031DB0FE1CD043570084EB1D /* SCMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0FD1CD043570084EB1D /* SCMusicModel.m */; };
+		031DB1011CD0436E0084EB1D /* SCMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB1001CD0436E0084EB1D /* SCMovieModel.m */; };
 		0362B32D1CCE92BA00B6E8FF /* SCMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B32C1CCE92BA00B6E8FF /* SCMovieController.m */; };
 		0362B3301CCE92D200B6E8FF /* SCMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B32F1CCE92D200B6E8FF /* SCMusicController.m */; };
 		0362B3331CCE92E900B6E8FF /* SCReadingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B3321CCE92E900B6E8FF /* SCReadingController.m */; };
@@ -49,6 +57,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031DB0EB1CCFEF250084EB1D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		031DB0EC1CCFEF2A0084EB1D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		031DB0EF1CCFEFB30084EB1D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		031DB0F11CD03D0A0084EB1D /* SCHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeModel.h; sourceTree = "<group>"; };
+		031DB0F21CD03D0A0084EB1D /* SCHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeModel.m; sourceTree = "<group>"; };
+		031DB0F41CD0402A0084EB1D /* SCHomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeCollectionCell.h; sourceTree = "<group>"; };
+		031DB0F51CD0402A0084EB1D /* SCHomeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeCollectionCell.m; sourceTree = "<group>"; };
+		031DB0F71CD0406D0084EB1D /* SCHomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCHomeCollectionCell.xib; sourceTree = "<group>"; };
+		031DB0F91CD0433C0084EB1D /* SCReadingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCReadingModel.h; sourceTree = "<group>"; };
+		031DB0FA1CD0433C0084EB1D /* SCReadingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCReadingModel.m; sourceTree = "<group>"; };
+		031DB0FC1CD043570084EB1D /* SCMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMusicModel.h; sourceTree = "<group>"; };
+		031DB0FD1CD043570084EB1D /* SCMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMusicModel.m; sourceTree = "<group>"; };
+		031DB0FF1CD0436E0084EB1D /* SCMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieModel.h; sourceTree = "<group>"; };
+		031DB1001CD0436E0084EB1D /* SCMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieModel.m; sourceTree = "<group>"; };
 		0362B32B1CCE92BA00B6E8FF /* SCMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieController.h; sourceTree = "<group>"; };
 		0362B32C1CCE92BA00B6E8FF /* SCMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieController.m; sourceTree = "<group>"; };
 		0362B32E1CCE92D200B6E8FF /* SCMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMusicController.h; sourceTree = "<group>"; };
@@ -103,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031DB0F01CCFEFB30084EB1D /* SystemConfiguration.framework in Frameworks */,
 				30F1E23E60C4736C8AFF7EDD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +147,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031DB0EA1CCFEEEB0084EB1D /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				031DB0EB1CCFEF250084EB1D /* Reachability.h */,
+				031DB0EC1CCFEF2A0084EB1D /* Reachability.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		031DB0EE1CCFEF380084EB1D /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		0362B3371CCEDF5E00B6E8FF /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +210,8 @@
 		03A783AC1CCDC4D9005D51FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				031DB0F11CD03D0A0084EB1D /* SCHomeModel.h */,
+				031DB0F21CD03D0A0084EB1D /* SCHomeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +219,9 @@
 		03A783AD1CCDC4D9005D51FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				031DB0F41CD0402A0084EB1D /* SCHomeCollectionCell.h */,
+				031DB0F51CD0402A0084EB1D /* SCHomeCollectionCell.m */,
+				031DB0F71CD0406D0084EB1D /* SCHomeCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +237,7 @@
 		03A783AF1CCDC4D9005D51FC /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				031DB0EA1CCFEEEB0084EB1D /* Lib */,
 				0362B3371CCEDF5E00B6E8FF /* NetWork */,
 				03A783B01CCDC4D9005D51FC /* Category */,
 				03A783B11CCDC4D9005D51FC /* Controller */,
@@ -277,6 +322,8 @@
 		03A783BA1CCDC4D9005D51FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				031DB0FF1CD0436E0084EB1D /* SCMovieModel.h */,
+				031DB1001CD0436E0084EB1D /* SCMovieModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +357,8 @@
 		03A783BE1CCDC4D9005D51FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				031DB0FC1CD043570084EB1D /* SCMusicModel.h */,
+				031DB0FD1CD043570084EB1D /* SCMusicModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +392,8 @@
 		03A783C21CCDC4D9005D51FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				031DB0F91CD0433C0084EB1D /* SCReadingModel.h */,
+				031DB0FA1CD0433C0084EB1D /* SCReadingModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -388,6 +439,7 @@
 		03D7D9101CCD3B03003112C8 /* iReader */ = {
 			isa = PBXGroup;
 			children = (
+				031DB0EE1CCFEF380084EB1D /* Framework */,
 				03A783A81CCDC4D9005D51FC /* Classes */,
 				03D7D91D1CCD3B03003112C8 /* Assets.xcassets */,
 				03D7D9111CCD3B03003112C8 /* Supporting Files */,
@@ -427,6 +479,7 @@
 		1D87A40EE597A0AF23EC6DEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				031DB0EF1CCFEFB30084EB1D /* SystemConfiguration.framework */,
 				12B4A352C8FE36A641221EAF /* libPods.a */,
 			);
 			name = Frameworks;
@@ -549,6 +602,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031DB0F81CD0406D0084EB1D /* SCHomeCollectionCell.xib in Resources */,
 				03D7D9211CCD3B03003112C8 /* LaunchScreen.storyboard in Resources */,
 				03D7D91E1CCD3B03003112C8 /* Assets.xcassets in Resources */,
 				03D7D91C1CCD3B03003112C8 /* Main.storyboard in Resources */,
@@ -624,6 +678,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031DB0FE1CD043570084EB1D /* SCMusicModel.m in Sources */,
+				031DB0F31CD03D0A0084EB1D /* SCHomeModel.m in Sources */,
 				03A783E31CCDEA66005D51FC /* SCBaseTableViewCell.m in Sources */,
 				03A783D11CCDDA69005D51FC /* SCNetAPI.m in Sources */,
 				03A783CC1CCDD716005D51FC /* SCBaseController.m in Sources */,
@@ -631,15 +687,19 @@
 				03A783E01CCDEA4C005D51FC /* SCBaseCollectionCell.m in Sources */,
 				0362B3301CCE92D200B6E8FF /* SCMusicController.m in Sources */,
 				03A783D71CCDE7E8005D51FC /* SCHomeController.m in Sources */,
+				031DB0FB1CD0433C0084EB1D /* SCReadingModel.m in Sources */,
 				03A783DD1CCDEA08005D51FC /* SCCusTabBarController.m in Sources */,
+				031DB0F61CD0402A0084EB1D /* SCHomeCollectionCell.m in Sources */,
 				0362B33A1CCEE26300B6E8FF /* SCNetWorkImage.m in Sources */,
 				0362B3361CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m in Sources */,
 				03A783C51CCDC4D9005D51FC /* main.m in Sources */,
 				03A783C41CCDC4D9005D51FC /* AppDelegate.m in Sources */,
 				03A783DA1CCDE9AA005D51FC /* SCCusNaviController.m in Sources */,
 				0362B3331CCE92E900B6E8FF /* SCReadingController.m in Sources */,
+				031DB1011CD0436E0084EB1D /* SCMovieModel.m in Sources */,
 				03A783D41CCDE758005D51FC /* SCBaseModel.m in Sources */,
 				0362B33D1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m in Sources */,
+				031DB0ED1CCFEF2A0084EB1D /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
