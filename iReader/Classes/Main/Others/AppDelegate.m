@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "SCCusTabBarController.h"
 
-
 @interface AppDelegate ()
 
 @end

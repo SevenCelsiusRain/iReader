@@ -19,6 +19,8 @@
     
     self.view.backgroundColor = [UIColor grayColor];
     
+    //self.tabBarItem.imageInsets = UIEdgeInsetsMake(15, 10, 5, 10);
+    
     // Do any additional setup after loading the view.
 }
 

@@ -14,6 +14,8 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 
+@property (nonatomic, strong) NSDictionary *dictHPList;
+
 @end
 
 @implementation SCHomeController
@@ -22,6 +24,8 @@
     
     if (!_dataSource) {
         
+        
+        NSLog(@"%@", self.dictHPList);
         _dataSource = [[NSDictionary alloc] init];
     }
     
@@ -47,26 +51,54 @@
     [super viewDidLoad];
     
     
-    self.view.backgroundColor = [UIColor blueColor];
-    // Do any additional setup after loading the view.
-}
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    //[self initData];
+    
+    NSLog(@"%@", self.dataSource);
+    
+   }
 
 - (void) initView {
     
     
 }
 
-- (void) initData {
+- (NSDictionary *)dictHPList {
     
-    NSString *urlStr = [NSString stringWithFormat:@"%@%@", BASE_URL, homeDetail];
+    if (!_dictHPList) {
+        
+        NSString *urlStr = [NSString stringWithFormat:@"%@%@", BASE_URL, homeList];
+        
+        [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
+            
+            self.dictHPList = dict[@"data"];
+            
+        } failure:^(NSError *error) {
+            
+        } isGet:YES];
+
+        
+    }
     
-    [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
-        
-    } failure:^(NSError *error) {
-        
-    } isGet:YES];
+    return _dictHPList;
     
 }
+
+//- (void) initData {
+//    
+//    NSString *urlStr = [NSString stringWithFormat:@"%@%@", BASE_URL, homeList];
+//    
+//    [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
+//        
+//        self.dictHPList = dict[@"data"];
+//        
+//    } failure:^(NSError *error) {
+//        
+//    } isGet:YES];
+//
+//}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     

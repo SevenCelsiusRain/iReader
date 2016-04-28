@@ -21,6 +21,7 @@
 		0362B3361CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B3351CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m */; };
 		0362B33A1CCEE26300B6E8FF /* SCNetWorkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B3391CCEE26300B6E8FF /* SCNetWorkImage.m */; };
 		0362B33D1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B33C1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m */; };
+		036B0D411CD182AA00D8205F /* UIImage+SCOrgImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */; };
 		03A783C41CCDC4D9005D51FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A783B51CCDC4D9005D51FC /* AppDelegate.m */; };
 		03A783C51CCDC4D9005D51FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A783B61CCDC4D9005D51FC /* main.m */; };
 		03A783CC1CCDD716005D51FC /* SCBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A783CB1CCDD716005D51FC /* SCBaseController.m */; };
@@ -83,10 +84,12 @@
 		0362B3391CCEE26300B6E8FF /* SCNetWorkImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNetWorkImage.m; sourceTree = "<group>"; };
 		0362B33B1CCEEAD600B6E8FF /* SCNetWorkAFRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNetWorkAFRequest.h; sourceTree = "<group>"; };
 		0362B33C1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNetWorkAFRequest.m; sourceTree = "<group>"; };
+		036B0D3F1CD182AA00D8205F /* UIImage+SCOrgImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCOrgImg.h"; sourceTree = "<group>"; };
+		036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCOrgImg.m"; sourceTree = "<group>"; };
+		036B0D871CD1A06B00D8205F /* URLStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLStr.h; sourceTree = "<group>"; };
 		03A783B41CCDC4D9005D51FC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		03A783B51CCDC4D9005D51FC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		03A783B61CCDC4D9005D51FC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		03A783C61CCDC9E0005D51FC /* URLStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = URLStr.h; path = ../../../../../Documents/URLStr.h; sourceTree = "<group>"; };
 		03A783C91CCDD029005D51FC /* PCHFile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCHFile.pch; sourceTree = "<group>"; };
 		03A783CA1CCDD716005D51FC /* SCBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBaseController.h; sourceTree = "<group>"; };
 		03A783CB1CCDD716005D51FC /* SCBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBaseController.m; sourceTree = "<group>"; };
@@ -229,7 +232,7 @@
 		03A783AE1CCDC4D9005D51FC /* Macro */ = {
 			isa = PBXGroup;
 			children = (
-				03A783C61CCDC9E0005D51FC /* URLStr.h */,
+				036B0D871CD1A06B00D8205F /* URLStr.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -253,6 +256,8 @@
 			children = (
 				0362B3341CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.h */,
 				0362B3351CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m */,
+				036B0D3F1CD182AA00D8205F /* UIImage+SCOrgImg.h */,
+				036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -691,6 +696,7 @@
 				03A783DD1CCDEA08005D51FC /* SCCusTabBarController.m in Sources */,
 				031DB0F61CD0402A0084EB1D /* SCHomeCollectionCell.m in Sources */,
 				0362B33A1CCEE26300B6E8FF /* SCNetWorkImage.m in Sources */,
+				036B0D411CD182AA00D8205F /* UIImage+SCOrgImg.m in Sources */,
 				0362B3361CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m in Sources */,
 				03A783C51CCDC4D9005D51FC /* main.m in Sources */,
 				03A783C41CCDC4D9005D51FC /* AppDelegate.m in Sources */,

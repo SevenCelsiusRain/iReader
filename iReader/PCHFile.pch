@@ -13,6 +13,8 @@
 
 #import "Masonry.h"  // 屏幕适配
 
+#import "UIImage+SCOrgImg.h" // 图片处理
+
 #import "UIBarButtonItem+SCExtension.h"
 
 // 网络请求

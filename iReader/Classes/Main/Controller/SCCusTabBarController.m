@@ -24,39 +24,49 @@
     [super viewDidLoad];
     
     // tabBar背景色
-    self.tabBar.barTintColor = [UIColor yellowColor];
+    //self.tabBar.barTintColor = [UIColor yellowColor];
     
     // 首页
     SCHomeController *homeVC = [[SCHomeController alloc] init];
-    [self addChildVC:homeVC title:@"" image:@"" selImage:@""];
+    [self addChildVC:homeVC title:@"爱阅" image:@"home" selImage:@"home_active"];
     
     // 阅读
     SCReadingController *readingVC = [[SCReadingController alloc] init];
-    [self addChildVC:readingVC title:@"" image:@"" selImage:@""];
+    [self addChildVC:readingVC title:@"阅读" image:@"reading" selImage:@"reading_active"];
     
     
     // 音乐
     SCMusicController *musicVC = [[SCMusicController alloc] init];
-    [self addChildVC:musicVC title:@"" image:@"" selImage:@""];
+    [self addChildVC:musicVC title:@"音乐" image:@"music" selImage:@"music_active"];
     
     // 电影
     SCMovieController *movieVC = [[SCMovieController alloc] init];
-    [self addChildVC:movieVC title:@"" image:@"" selImage:@""];
+    [self addChildVC:movieVC title:@"电影" image:@"movie" selImage:@"movie_active"];
     
 }
 
 #pragma mark - 为tabbar添加子控制器
 - (void) addChildVC:(UIViewController *)VC title:(NSString *)title image:(NSString *) image selImage:(NSString *)selImage{
 
-    [VC.tabBarItem setImage:[UIImage imageNamed:image]];
-    [VC.tabBarItem setSelectedImage:[UIImage imageNamed:selImage]];
+    VC.navigationItem.title = title;
     
+
+    
+    [VC.tabBarItem setImage:[[UIImage imageNamed:image] originalImg]];
+    [VC.tabBarItem setSelectedImage:[[UIImage imageNamed:selImage] originalImg]];
+    
+//    VC.tabBarItem.imageInsets = UIEdgeInsetsMake(15, 10, -15, -10);
+    VC.tabBarController.tabBar.contentMode = UIViewContentModeScaleAspectFit;
+    VC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+   
     
     SCCusNaviController *nav = [[SCCusNaviController alloc] initWithRootViewController:VC];
+    
     [self addChildViewController:nav];
 
 
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
