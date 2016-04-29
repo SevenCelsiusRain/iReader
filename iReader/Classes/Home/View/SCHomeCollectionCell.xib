@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FHV-9C-Xz4">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FHV-9C-Xz4" customClass="SCHomeCollectionCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -42,6 +42,9 @@
                                 <rect key="frame" x="8" y="8" width="343" height="274"/>
                                 <color key="backgroundColor" red="0.55000000000000004" green="0.070926877620789253" blue="0.10489003252388408" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="imgBtnClick" destination="FHV-9C-Xz4" eventType="touchUpInside" id="zrX-RU-OzM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0u-kN-Yqd">
                                 <rect key="frame" x="8" y="347" width="326" height="119"/>
@@ -53,26 +56,52 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFJ-AS-rtR">
-                        <rect key="frame" x="8" y="559" width="46" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFJ-AS-rtR">
+                        <rect key="frame" x="165" y="554" width="44" height="44"/>
                         <color key="backgroundColor" red="0.17875526734519107" green="0.50636365253240512" blue="0.55000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" image="laud"/>
+                        <state key="selected" image="laud_selected"/>
+                        <connections>
+                            <action selector="praiseBtnClick" destination="FHV-9C-Xz4" eventType="touchUpInside" id="FOT-zK-lyj"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHs-0T-qUE">
-                        <rect key="frame" x="164" y="558" width="46" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7A-hd-B4R">
+                        <rect key="frame" x="290" y="557" width="50" height="41"/>
                         <color key="backgroundColor" red="0.17875526729999999" green="0.50636365250000004" blue="0.55000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" image="share_image"/>
+                        <connections>
+                            <action selector="shareBtnClick" destination="FHV-9C-Xz4" eventType="touchUpInside" id="Iou-6t-V7g"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7A-hd-B4R">
-                        <rect key="frame" x="312" y="561" width="46" height="30"/>
-                        <color key="backgroundColor" red="0.17875526729999999" green="0.50636365250000004" blue="0.55000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="Button"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHs-0T-qUE">
+                        <rect key="frame" x="19" y="557" width="45" height="44"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal" image="diary"/>
+                        <state key="selected" image="diary_pressed"/>
+                        <connections>
+                            <action selector="diaryBtnClick:" destination="FHV-9C-Xz4" eventType="touchUpInside" id="66U-Sl-a1F"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <size key="customSize" width="341" height="374"/>
-            <point key="canvasLocation" x="679.5" y="377.5"/>
+            <connections>
+                <outlet property="authorLab" destination="2Mw-cw-raY" id="Q04-s2-tL0"/>
+                <outlet property="contentLab" destination="n0u-kN-Yqd" id="i2m-yy-fQP"/>
+                <outlet property="imgBtn" destination="3e4-72-K8M" id="NvG-LE-IFd"/>
+                <outlet property="praiseBtn" destination="TFJ-AS-rtR" id="BQC-H0-nZi"/>
+                <outlet property="timeLab" destination="YIy-ev-kD8" id="4nR-4p-AFN"/>
+                <outlet property="titleLab" destination="eJw-wL-o3I" id="7kj-nF-WLx"/>
+            </connections>
+            <point key="canvasLocation" x="679.5" y="377"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="diary" width="44" height="44"/>
+        <image name="diary_pressed" width="44" height="44"/>
+        <image name="laud" width="44" height="44"/>
+        <image name="laud_selected" width="44" height="44"/>
+        <image name="share_image" width="44" height="44"/>
+    </resources>
 </document>

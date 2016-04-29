@@ -7,26 +7,56 @@
 //
 
 #import "SCHomeController.h"
+#import "SCHomeModel.h"
+#import "SCHomeCollectionCell.h"
 
 @interface SCHomeController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, strong) NSDictionary *dataSource;
+@property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 
-@property (nonatomic, strong) NSDictionary *dictHPList;
 
 @end
 
 @implementation SCHomeController
 
-- (NSDictionary *)dataSource {
+- (NSArray *)dataSource {
     
     if (!_dataSource) {
         
+        NSString *urlStr = [NSString stringWithFormat:BASE_URL, homeList];
         
-        NSLog(@"%@", self.dictHPList);
-        _dataSource = [[NSDictionary alloc] init];
+        [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
+            
+            NSMutableArray *arrayM = [[NSMutableArray alloc] initWithCapacity:0];
+            
+            NSArray *array = dict[@"data"];
+            
+            for (int i = 0; i < array.count; i++) {
+                
+                NSString *str = [NSString stringWithFormat:homeDetail, array[i]];
+                NSString *urlStr = [NSString stringWithFormat:BASE_URL, str];
+                
+                [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
+                    
+                    SCHomeModel *model = [SCHomeModel homeModelWithDict:dict];
+                    [arrayM addObject:model];
+                    
+                } failure:^(NSError *error) {
+                    
+                    
+                } isGet:YES];
+                
+            }
+            
+            _dataSource = array;
+            
+        } failure:^(NSError *error) {
+            
+        } isGet:YES];
+        
+
     }
     
     return _dataSource;
@@ -38,6 +68,8 @@
     if (!_collectionView) {
         
         _layout = [[UICollectionViewFlowLayout alloc] init];
+        _layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:_layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -54,37 +86,34 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    //[self initData];
-    
-    NSLog(@"%@", self.dataSource);
+    [self initView];
     
    }
 
 - (void) initView {
     
     
-}
-
-- (NSDictionary *)dictHPList {
-    
-    if (!_dictHPList) {
-        
-        NSString *urlStr = [NSString stringWithFormat:@"%@%@", BASE_URL, homeList];
-        
-        [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
-            
-            self.dictHPList = dict[@"data"];
-            
-        } failure:^(NSError *error) {
-            
-        } isGet:YES];
-
-        
-    }
-    
-    return _dictHPList;
+    [self.view addSubview:self.collectionView];
+    NSString *className = NSStringFromClass([SCHomeCollectionCell class]);
+    [self.collectionView registerNib:[UINib nibWithNibName:className bundle:nil] forCellWithReuseIdentifier:className];
     
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.dataSource.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SCHomeCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SCHomeCollectionCell class]) forIndexPath:indexPath];
+    
+    
+    return cell;
+    
+}
+
+
 
 //- (void) initData {
 //    
@@ -99,16 +128,6 @@
 //    } isGet:YES];
 //
 //}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return nil;
-}
-
-- (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
-    return 10;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

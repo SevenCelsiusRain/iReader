@@ -10,4 +10,6 @@
 
 @interface SCBaseTableViewCell : UITableViewCell
 
++ (id) tableCellWithTableView:(UITableView *)tableView;
+
 @end

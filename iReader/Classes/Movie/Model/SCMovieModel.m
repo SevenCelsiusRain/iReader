@@ -10,4 +10,15 @@
 
 @implementation SCMovieModel
 
++ (id)movieModelWithDict:(NSDictionary *)dict {
+    
+    SCMovieModel *model = [[SCMovieModel alloc] initWithDictionary:dict error:nil];
+    
+    model.ID = dict[@"id"];
+    
+    return model;
+    
+}
+
+
 @end

@@ -10,10 +10,9 @@
 
 @implementation SCHomeModel
 
-+ (id)homeWithDict:(NSDictionary *)dict {
++ (id)homeModelWithDict:(NSDictionary *)dict {
     
     SCHomeModel *model = [[SCHomeModel alloc] initWithDictionary:dict error:nil];
-    
     
     return model;
     

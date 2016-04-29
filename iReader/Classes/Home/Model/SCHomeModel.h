@@ -20,6 +20,6 @@
 @property (nonatomic, assign) NSInteger sharenum;   // 分享次数
 @property (nonatomic, assign) NSInteger commentnum; 
 
-+ (id) homeWithDict:(NSDictionary *)dict;
++ (id) homeModelWithDict:(NSDictionary *)dict;
 
 @end

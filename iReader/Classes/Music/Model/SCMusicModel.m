@@ -8,6 +8,7 @@
 
 #import "SCMusicModel.h"
 
+
 @implementation SCMusicModel
 
 @end

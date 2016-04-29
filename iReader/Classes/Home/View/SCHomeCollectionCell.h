@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class SCHomeModel;
 @interface SCHomeCollectionCell : UICollectionViewCell
+
+@property (nonatomic, strong) SCHomeModel *homeMdel;
 
 @end

@@ -10,17 +10,10 @@
 
 @interface SCMovieModel : SCBaseModel
 
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *detailcover;
-@property (nonatomic, copy) NSString *video;
-@property (nonatomic, copy) NSString *score;
-@property (nonatomic, copy) NSString *review;
-@property (nonatomic, copy) NSString *keywords;
-@property (nonatomic, copy) NSString *movie_id;
-@property (nonatomic, copy) NSString *info;
-@property (nonatomic, copy) NSString *officialstory;
-@property (nonatomic, copy) NSString *charge_edt;
-@property (nonatomic, copy) NSString *maketime;
-@property (nonatomic, strong) NSArray *photo;
+@property (nonatomic, copy) NSString<Ignore> *ID;
+@property (nonatomic, copy) NSString *cover;
+
+
++ (id) movieModelWithDict:(NSDictionary *)dict;
 
 @end

@@ -21,6 +21,16 @@
 		0362B3361CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B3351CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m */; };
 		0362B33A1CCEE26300B6E8FF /* SCNetWorkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B3391CCEE26300B6E8FF /* SCNetWorkImage.m */; };
 		0362B33D1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B33C1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m */; };
+		036ADFEE1CD2782900F9FE54 /* SCReadTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036ADFED1CD2782900F9FE54 /* SCReadTabCell.m */; };
+		036ADFF01CD2784000F9FE54 /* SCReadTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036ADFEF1CD2784000F9FE54 /* SCReadTabCell.xib */; };
+		036ADFF31CD27AC600F9FE54 /* SCMovieTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036ADFF21CD27AC600F9FE54 /* SCMovieTabCell.m */; };
+		036ADFF51CD27B2E00F9FE54 /* SCMovieTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036ADFF41CD27B2E00F9FE54 /* SCMovieTabCell.xib */; };
+		036ADFF81CD2863600F9FE54 /* SCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 036ADFF71CD2863600F9FE54 /* SCHeaderView.m */; };
+		036ADFFA1CD2864300F9FE54 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036ADFF91CD2864300F9FE54 /* View.xib */; };
+		036ADFFD1CD28D0600F9FE54 /* SCContentTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036ADFFC1CD28D0600F9FE54 /* SCContentTabCell.m */; };
+		036ADFFF1CD28D1700F9FE54 /* SCContentTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036ADFFE1CD28D1700F9FE54 /* SCContentTabCell.xib */; };
+		036AE0021CD2BF0D00F9FE54 /* SCMuListColCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */; };
+		036AE0041CD2C14B00F9FE54 /* SCMuListColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */; };
 		036B0D411CD182AA00D8205F /* UIImage+SCOrgImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */; };
 		03A783C41CCDC4D9005D51FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A783B51CCDC4D9005D51FC /* AppDelegate.m */; };
 		03A783C51CCDC4D9005D51FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A783B61CCDC4D9005D51FC /* main.m */; };
@@ -84,6 +94,21 @@
 		0362B3391CCEE26300B6E8FF /* SCNetWorkImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNetWorkImage.m; sourceTree = "<group>"; };
 		0362B33B1CCEEAD600B6E8FF /* SCNetWorkAFRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCNetWorkAFRequest.h; sourceTree = "<group>"; };
 		0362B33C1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCNetWorkAFRequest.m; sourceTree = "<group>"; };
+		036ADFEC1CD2782900F9FE54 /* SCReadTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCReadTabCell.h; sourceTree = "<group>"; };
+		036ADFED1CD2782900F9FE54 /* SCReadTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCReadTabCell.m; sourceTree = "<group>"; };
+		036ADFEF1CD2784000F9FE54 /* SCReadTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCReadTabCell.xib; sourceTree = "<group>"; };
+		036ADFF11CD27AC600F9FE54 /* SCMovieTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieTabCell.h; sourceTree = "<group>"; };
+		036ADFF21CD27AC600F9FE54 /* SCMovieTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieTabCell.m; sourceTree = "<group>"; };
+		036ADFF41CD27B2E00F9FE54 /* SCMovieTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCMovieTabCell.xib; sourceTree = "<group>"; };
+		036ADFF61CD2863600F9FE54 /* SCHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHeaderView.h; sourceTree = "<group>"; };
+		036ADFF71CD2863600F9FE54 /* SCHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHeaderView.m; sourceTree = "<group>"; };
+		036ADFF91CD2864300F9FE54 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		036ADFFB1CD28D0600F9FE54 /* SCContentTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCContentTabCell.h; sourceTree = "<group>"; };
+		036ADFFC1CD28D0600F9FE54 /* SCContentTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCContentTabCell.m; sourceTree = "<group>"; };
+		036ADFFE1CD28D1700F9FE54 /* SCContentTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCContentTabCell.xib; sourceTree = "<group>"; };
+		036AE0001CD2BF0D00F9FE54 /* SCMuListColCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMuListColCell.h; sourceTree = "<group>"; };
+		036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMuListColCell.m; sourceTree = "<group>"; };
+		036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCMuListColCell.xib; sourceTree = "<group>"; };
 		036B0D3F1CD182AA00D8205F /* UIImage+SCOrgImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCOrgImg.h"; sourceTree = "<group>"; };
 		036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCOrgImg.m"; sourceTree = "<group>"; };
 		036B0D871CD1A06B00D8205F /* URLStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLStr.h; sourceTree = "<group>"; };
@@ -181,12 +206,12 @@
 			isa = PBXGroup;
 			children = (
 				03A783CE1CCDDA56005D51FC /* APIFile */,
-				03A783A91CCDC4D9005D51FC /* Home */,
 				03A783AE1CCDC4D9005D51FC /* Macro */,
 				03A783AF1CCDC4D9005D51FC /* Main */,
-				03A783B81CCDC4D9005D51FC /* Movie */,
-				03A783BC1CCDC4D9005D51FC /* Music */,
+				03A783A91CCDC4D9005D51FC /* Home */,
 				03A783C01CCDC4D9005D51FC /* Reading */,
+				03A783BC1CCDC4D9005D51FC /* Music */,
+				03A783B81CCDC4D9005D51FC /* Movie */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -336,6 +361,9 @@
 		03A783BB1CCDC4D9005D51FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				036ADFF11CD27AC600F9FE54 /* SCMovieTabCell.h */,
+				036ADFF21CD27AC600F9FE54 /* SCMovieTabCell.m */,
+				036ADFF41CD27B2E00F9FE54 /* SCMovieTabCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,6 +399,15 @@
 		03A783BF1CCDC4D9005D51FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				036ADFF61CD2863600F9FE54 /* SCHeaderView.h */,
+				036ADFF71CD2863600F9FE54 /* SCHeaderView.m */,
+				036ADFF91CD2864300F9FE54 /* View.xib */,
+				036ADFFB1CD28D0600F9FE54 /* SCContentTabCell.h */,
+				036ADFFC1CD28D0600F9FE54 /* SCContentTabCell.m */,
+				036ADFFE1CD28D1700F9FE54 /* SCContentTabCell.xib */,
+				036AE0001CD2BF0D00F9FE54 /* SCMuListColCell.h */,
+				036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */,
+				036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -406,6 +443,9 @@
 		03A783C31CCDC4D9005D51FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				036ADFEC1CD2782900F9FE54 /* SCReadTabCell.h */,
+				036ADFED1CD2782900F9FE54 /* SCReadTabCell.m */,
+				036ADFEF1CD2784000F9FE54 /* SCReadTabCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -607,10 +647,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036ADFFA1CD2864300F9FE54 /* View.xib in Resources */,
+				036ADFF51CD27B2E00F9FE54 /* SCMovieTabCell.xib in Resources */,
 				031DB0F81CD0406D0084EB1D /* SCHomeCollectionCell.xib in Resources */,
 				03D7D9211CCD3B03003112C8 /* LaunchScreen.storyboard in Resources */,
 				03D7D91E1CCD3B03003112C8 /* Assets.xcassets in Resources */,
+				036ADFFF1CD28D1700F9FE54 /* SCContentTabCell.xib in Resources */,
+				036ADFF01CD2784000F9FE54 /* SCReadTabCell.xib in Resources */,
 				03D7D91C1CCD3B03003112C8 /* Main.storyboard in Resources */,
+				036AE0041CD2C14B00F9FE54 /* SCMuListColCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,8 +729,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				031DB0FE1CD043570084EB1D /* SCMusicModel.m in Sources */,
+				036ADFFD1CD28D0600F9FE54 /* SCContentTabCell.m in Sources */,
+				036ADFF81CD2863600F9FE54 /* SCHeaderView.m in Sources */,
 				031DB0F31CD03D0A0084EB1D /* SCHomeModel.m in Sources */,
 				03A783E31CCDEA66005D51FC /* SCBaseTableViewCell.m in Sources */,
+				036ADFEE1CD2782900F9FE54 /* SCReadTabCell.m in Sources */,
 				03A783D11CCDDA69005D51FC /* SCNetAPI.m in Sources */,
 				03A783CC1CCDD716005D51FC /* SCBaseController.m in Sources */,
 				0362B32D1CCE92BA00B6E8FF /* SCMovieController.m in Sources */,
@@ -694,6 +742,7 @@
 				03A783D71CCDE7E8005D51FC /* SCHomeController.m in Sources */,
 				031DB0FB1CD0433C0084EB1D /* SCReadingModel.m in Sources */,
 				03A783DD1CCDEA08005D51FC /* SCCusTabBarController.m in Sources */,
+				036AE0021CD2BF0D00F9FE54 /* SCMuListColCell.m in Sources */,
 				031DB0F61CD0402A0084EB1D /* SCHomeCollectionCell.m in Sources */,
 				0362B33A1CCEE26300B6E8FF /* SCNetWorkImage.m in Sources */,
 				036B0D411CD182AA00D8205F /* UIImage+SCOrgImg.m in Sources */,
@@ -704,6 +753,7 @@
 				0362B3331CCE92E900B6E8FF /* SCReadingController.m in Sources */,
 				031DB1011CD0436E0084EB1D /* SCMovieModel.m in Sources */,
 				03A783D41CCDE758005D51FC /* SCBaseModel.m in Sources */,
+				036ADFF31CD27AC600F9FE54 /* SCMovieTabCell.m in Sources */,
 				0362B33D1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m in Sources */,
 				031DB0ED1CCFEF2A0084EB1D /* Reachability.m in Sources */,
 			);

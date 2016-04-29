@@ -10,6 +10,23 @@
 
 @implementation SCBaseTableViewCell
 
+
++ (id)tableCellWithTableView:(UITableView *)tableView {
+    
+    NSString *className = NSStringFromClass([self class]);
+    
+    UINib *nib = [UINib nibWithNibName:className bundle:nil];
+    
+    [tableView registerNib:nib forCellReuseIdentifier:className];
+    
+    SCBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:className];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
+    
+    
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
