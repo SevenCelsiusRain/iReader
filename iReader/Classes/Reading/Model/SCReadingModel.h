@@ -10,9 +10,37 @@
 
 @interface SCReadingModel : SCBaseModel
 
-@property (nonatomic, copy) NSString *date;
-@property (nonatomic, copy) NSString *items;
+@property (nonatomic, strong) NSArray *data;
 
-#warning 多重建模
++ (id) readModelWithDict:(NSDictionary *)dict;
 
 @end
+
+/***
+ 组建模
+ */
+@interface SCSectionModel : SCBaseModel
+
+@property (nonatomic, copy) NSString *date; // 时间
+@property (nonatomic, strong) NSArray *items; // 组
+
++ (id) sectionModelWithDict:(NSDictionary *)dict;
+
+@end
+
+/***
+ 
+ cell内容建模
+ */
+@class SCBaseContentModel;
+@interface SCCellModel : SCBaseModel
+
+@property (nonatomic, copy) NSString<Optional> *time;
+@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, strong) SCBaseContentModel<Ignore> *contentModel;
+
++ (id) cellModelWithDict:(NSDictionary *)dict;
+
+@end
+
+

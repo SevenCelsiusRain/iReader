@@ -15,6 +15,17 @@
 		031DB0FB1CD0433C0084EB1D /* SCReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0FA1CD0433C0084EB1D /* SCReadingModel.m */; };
 		031DB0FE1CD043570084EB1D /* SCMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0FD1CD043570084EB1D /* SCMusicModel.m */; };
 		031DB1011CD0436E0084EB1D /* SCMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB1001CD0436E0084EB1D /* SCMovieModel.m */; };
+		032725041CD4455E007A094A /* SCMovieDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725031CD4455E007A094A /* SCMovieDetailController.m */; };
+		032725071CD481CD007A094A /* SCMoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725061CD481CD007A094A /* SCMoDetailModel.m */; };
+		0327250E1CD49043007A094A /* SCReDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0327250D1CD49043007A094A /* SCReDetailController.m */; };
+		032725111CD4A78A007A094A /* SCAuthorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725101CD4A78A007A094A /* SCAuthorModel.m */; };
+		032725171CD4A947007A094A /* SCBaseContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725161CD4A947007A094A /* SCBaseContentModel.m */; };
+		0327251A1CD4A968007A094A /* SCQuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725191CD4A968007A094A /* SCQuestionModel.m */; };
+		0327251D1CD4A995007A094A /* SCSerialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0327251C1CD4A995007A094A /* SCSerialModel.m */; };
+		032725201CD4A9AD007A094A /* SCEssayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0327251F1CD4A9AD007A094A /* SCEssayModel.m */; };
+		032725231CD4AC91007A094A /* SCFactoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725221CD4AC91007A094A /* SCFactoryModel.m */; };
+		0347E7921CD3F931008E4941 /* SCPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0347E7911CD3F931008E4941 /* SCPersonalController.m */; };
+		0347E7951CD3F977008E4941 /* SCSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0347E7941CD3F977008E4941 /* SCSearchController.m */; };
 		0362B32D1CCE92BA00B6E8FF /* SCMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B32C1CCE92BA00B6E8FF /* SCMovieController.m */; };
 		0362B3301CCE92D200B6E8FF /* SCMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B32F1CCE92D200B6E8FF /* SCMusicController.m */; };
 		0362B3331CCE92E900B6E8FF /* SCReadingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B3321CCE92E900B6E8FF /* SCReadingController.m */; };
@@ -82,6 +93,28 @@
 		031DB0FD1CD043570084EB1D /* SCMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMusicModel.m; sourceTree = "<group>"; };
 		031DB0FF1CD0436E0084EB1D /* SCMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieModel.h; sourceTree = "<group>"; };
 		031DB1001CD0436E0084EB1D /* SCMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieModel.m; sourceTree = "<group>"; };
+		032725021CD4455E007A094A /* SCMovieDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieDetailController.h; sourceTree = "<group>"; };
+		032725031CD4455E007A094A /* SCMovieDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieDetailController.m; sourceTree = "<group>"; };
+		032725051CD481CD007A094A /* SCMoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMoDetailModel.h; sourceTree = "<group>"; };
+		032725061CD481CD007A094A /* SCMoDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMoDetailModel.m; sourceTree = "<group>"; };
+		0327250C1CD49043007A094A /* SCReDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCReDetailController.h; sourceTree = "<group>"; };
+		0327250D1CD49043007A094A /* SCReDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCReDetailController.m; sourceTree = "<group>"; };
+		0327250F1CD4A78A007A094A /* SCAuthorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAuthorModel.h; sourceTree = "<group>"; };
+		032725101CD4A78A007A094A /* SCAuthorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAuthorModel.m; sourceTree = "<group>"; };
+		032725151CD4A947007A094A /* SCBaseContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBaseContentModel.h; sourceTree = "<group>"; };
+		032725161CD4A947007A094A /* SCBaseContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBaseContentModel.m; sourceTree = "<group>"; };
+		032725181CD4A968007A094A /* SCQuestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCQuestionModel.h; sourceTree = "<group>"; };
+		032725191CD4A968007A094A /* SCQuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCQuestionModel.m; sourceTree = "<group>"; };
+		0327251B1CD4A995007A094A /* SCSerialModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSerialModel.h; sourceTree = "<group>"; };
+		0327251C1CD4A995007A094A /* SCSerialModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSerialModel.m; sourceTree = "<group>"; };
+		0327251E1CD4A9AD007A094A /* SCEssayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEssayModel.h; sourceTree = "<group>"; };
+		0327251F1CD4A9AD007A094A /* SCEssayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEssayModel.m; sourceTree = "<group>"; };
+		032725211CD4AC91007A094A /* SCFactoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFactoryModel.h; sourceTree = "<group>"; };
+		032725221CD4AC91007A094A /* SCFactoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFactoryModel.m; sourceTree = "<group>"; };
+		0347E7901CD3F931008E4941 /* SCPersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPersonalController.h; sourceTree = "<group>"; };
+		0347E7911CD3F931008E4941 /* SCPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPersonalController.m; sourceTree = "<group>"; };
+		0347E7931CD3F977008E4941 /* SCSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSearchController.h; sourceTree = "<group>"; };
+		0347E7941CD3F977008E4941 /* SCSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSearchController.m; sourceTree = "<group>"; };
 		0362B32B1CCE92BA00B6E8FF /* SCMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieController.h; sourceTree = "<group>"; };
 		0362B32C1CCE92BA00B6E8FF /* SCMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieController.m; sourceTree = "<group>"; };
 		0362B32E1CCE92D200B6E8FF /* SCMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMusicController.h; sourceTree = "<group>"; };
@@ -191,6 +224,140 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		032724FE1CD444D7007A094A /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				032724FF1CD444D7007A094A /* Controller */,
+				032725001CD444D7007A094A /* Model */,
+				032725011CD444D7007A094A /* View */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		032724FF1CD444D7007A094A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				032725021CD4455E007A094A /* SCMovieDetailController.h */,
+				032725031CD4455E007A094A /* SCMovieDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		032725001CD444D7007A094A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				032725051CD481CD007A094A /* SCMoDetailModel.h */,
+				032725061CD481CD007A094A /* SCMoDetailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		032725011CD444D7007A094A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		032725081CD489D7007A094A /* ReadDetail */ = {
+			isa = PBXGroup;
+			children = (
+				032725091CD489D7007A094A /* Controller */,
+				0327250A1CD489D7007A094A /* Model */,
+				0327250B1CD489D7007A094A /* View */,
+			);
+			path = ReadDetail;
+			sourceTree = "<group>";
+		};
+		032725091CD489D7007A094A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0327250C1CD49043007A094A /* SCReDetailController.h */,
+				0327250D1CD49043007A094A /* SCReDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0327250A1CD489D7007A094A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0327250B1CD489D7007A094A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0347E7881CD3F8A2008E4941 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0347E78D1CD3F903008E4941 /* Controller */,
+				0347E78E1CD3F903008E4941 /* Model */,
+				0347E78F1CD3F903008E4941 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0347E7891CD3F8AA008E4941 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				0347E78A1CD3F8F2008E4941 /* Controller */,
+				0347E78B1CD3F8F2008E4941 /* Model */,
+				0347E78C1CD3F8F2008E4941 /* View */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		0347E78A1CD3F8F2008E4941 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0347E7901CD3F931008E4941 /* SCPersonalController.h */,
+				0347E7911CD3F931008E4941 /* SCPersonalController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0347E78B1CD3F8F2008E4941 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0347E78C1CD3F8F2008E4941 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0347E78D1CD3F903008E4941 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0347E7931CD3F977008E4941 /* SCSearchController.h */,
+				0347E7941CD3F977008E4941 /* SCSearchController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0347E78E1CD3F903008E4941 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0347E78F1CD3F903008E4941 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0362B3371CCEDF5E00B6E8FF /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +375,8 @@
 				03A783CE1CCDDA56005D51FC /* APIFile */,
 				03A783AE1CCDC4D9005D51FC /* Macro */,
 				03A783AF1CCDC4D9005D51FC /* Main */,
+				0347E7881CD3F8A2008E4941 /* Search */,
+				0347E7891CD3F8AA008E4941 /* Personal */,
 				03A783A91CCDC4D9005D51FC /* Home */,
 				03A783C01CCDC4D9005D51FC /* Reading */,
 				03A783BC1CCDC4D9005D51FC /* Music */,
@@ -305,6 +474,8 @@
 			children = (
 				03A783D21CCDE758005D51FC /* SCBaseModel.h */,
 				03A783D31CCDE758005D51FC /* SCBaseModel.m */,
+				0327250F1CD4A78A007A094A /* SCAuthorModel.h */,
+				032725101CD4A78A007A094A /* SCAuthorModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +507,7 @@
 				03A783B91CCDC4D9005D51FC /* Controller */,
 				03A783BA1CCDC4D9005D51FC /* Model */,
 				03A783BB1CCDC4D9005D51FC /* View */,
+				032724FE1CD444D7007A094A /* MovieDetail */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -418,6 +590,7 @@
 				03A783C11CCDC4D9005D51FC /* Controller */,
 				03A783C21CCDC4D9005D51FC /* Model */,
 				03A783C31CCDC4D9005D51FC /* View */,
+				032725081CD489D7007A094A /* ReadDetail */,
 			);
 			path = Reading;
 			sourceTree = "<group>";
@@ -436,6 +609,16 @@
 			children = (
 				031DB0F91CD0433C0084EB1D /* SCReadingModel.h */,
 				031DB0FA1CD0433C0084EB1D /* SCReadingModel.m */,
+				032725151CD4A947007A094A /* SCBaseContentModel.h */,
+				032725161CD4A947007A094A /* SCBaseContentModel.m */,
+				032725181CD4A968007A094A /* SCQuestionModel.h */,
+				032725191CD4A968007A094A /* SCQuestionModel.m */,
+				0327251B1CD4A995007A094A /* SCSerialModel.h */,
+				0327251C1CD4A995007A094A /* SCSerialModel.m */,
+				0327251E1CD4A9AD007A094A /* SCEssayModel.h */,
+				0327251F1CD4A9AD007A094A /* SCEssayModel.m */,
+				032725211CD4AC91007A094A /* SCFactoryModel.h */,
+				032725221CD4AC91007A094A /* SCFactoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -728,22 +911,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0327250E1CD49043007A094A /* SCReDetailController.m in Sources */,
 				031DB0FE1CD043570084EB1D /* SCMusicModel.m in Sources */,
 				036ADFFD1CD28D0600F9FE54 /* SCContentTabCell.m in Sources */,
+				032725071CD481CD007A094A /* SCMoDetailModel.m in Sources */,
 				036ADFF81CD2863600F9FE54 /* SCHeaderView.m in Sources */,
 				031DB0F31CD03D0A0084EB1D /* SCHomeModel.m in Sources */,
 				03A783E31CCDEA66005D51FC /* SCBaseTableViewCell.m in Sources */,
 				036ADFEE1CD2782900F9FE54 /* SCReadTabCell.m in Sources */,
+				0347E7921CD3F931008E4941 /* SCPersonalController.m in Sources */,
+				032725171CD4A947007A094A /* SCBaseContentModel.m in Sources */,
 				03A783D11CCDDA69005D51FC /* SCNetAPI.m in Sources */,
 				03A783CC1CCDD716005D51FC /* SCBaseController.m in Sources */,
 				0362B32D1CCE92BA00B6E8FF /* SCMovieController.m in Sources */,
 				03A783E01CCDEA4C005D51FC /* SCBaseCollectionCell.m in Sources */,
 				0362B3301CCE92D200B6E8FF /* SCMusicController.m in Sources */,
+				032725201CD4A9AD007A094A /* SCEssayModel.m in Sources */,
 				03A783D71CCDE7E8005D51FC /* SCHomeController.m in Sources */,
 				031DB0FB1CD0433C0084EB1D /* SCReadingModel.m in Sources */,
+				0327251D1CD4A995007A094A /* SCSerialModel.m in Sources */,
 				03A783DD1CCDEA08005D51FC /* SCCusTabBarController.m in Sources */,
 				036AE0021CD2BF0D00F9FE54 /* SCMuListColCell.m in Sources */,
 				031DB0F61CD0402A0084EB1D /* SCHomeCollectionCell.m in Sources */,
+				032725231CD4AC91007A094A /* SCFactoryModel.m in Sources */,
 				0362B33A1CCEE26300B6E8FF /* SCNetWorkImage.m in Sources */,
 				036B0D411CD182AA00D8205F /* UIImage+SCOrgImg.m in Sources */,
 				0362B3361CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m in Sources */,
@@ -755,7 +945,11 @@
 				03A783D41CCDE758005D51FC /* SCBaseModel.m in Sources */,
 				036ADFF31CD27AC600F9FE54 /* SCMovieTabCell.m in Sources */,
 				0362B33D1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m in Sources */,
+				032725041CD4455E007A094A /* SCMovieDetailController.m in Sources */,
 				031DB0ED1CCFEF2A0084EB1D /* Reachability.m in Sources */,
+				032725111CD4A78A007A094A /* SCAuthorModel.m in Sources */,
+				0347E7951CD3F977008E4941 /* SCSearchController.m in Sources */,
+				0327251A1CD4A968007A094A /* SCQuestionModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

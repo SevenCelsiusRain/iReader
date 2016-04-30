@@ -7,7 +7,8 @@
 //
 
 #import "SCBaseController.h"
-
+#import "SCSearchController.h"
+#import "SCPersonalController.h"
 
 @interface SCBaseController ()
 
@@ -17,8 +18,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+    
+    NSLog(@"++++++%lu", self.navigationController.viewControllers.count);
+    if (self.navigationController.viewControllers.count == 1) {
+        
+        UIBarButtonItem *searchItem = [UIBarButtonItem itemWithTarget:self action:@selector(searchAction) image:@"search" hihImage:@"search_pressed"];
+        self.navigationItem.leftBarButtonItem = searchItem;
+        
+        UIBarButtonItem *personalItem = [UIBarButtonItem itemWithTarget:self action:@selector(personalVC) image:@"individual_center" hihImage:nil];
+        self.navigationItem.rightBarButtonItem = personalItem;
+    }
+    
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
+
+- (void) searchAction {
+    
+    SCSearchController *searchVC = [[SCSearchController alloc] init];
+    
+    [self.navigationController pushViewController:searchVC animated:YES];
+    
+    
+}
+
+- (void) personalVC {
+    
+    SCPersonalController *personalVC = [[SCPersonalController alloc] init];
+    [self.navigationController pushViewController:personalVC animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

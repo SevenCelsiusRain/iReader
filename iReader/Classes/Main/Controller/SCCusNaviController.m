@@ -15,10 +15,18 @@
 
 @implementation SCCusNaviController
 
+// 类被使用才会调用
++ (void)initialize {
+    
+    
+}
+
+// 引入类文件就会被调用
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationBar.barTintColor = [UIColor redColor];
+    self.navigationBar.barTintColor = [UIColor whiteColor];
+    
     
 }
 
@@ -29,12 +37,21 @@
         
         viewController.hidesBottomBarWhenPushed = YES;
         
-        UIBarButtonItem *backItem = [UIBarButtonItem itemWithTarget:self action:@selector(backPreVC) image:@"" hihImage:@""];
+        UIBarButtonItem *backItem = [UIBarButtonItem itemWithTarget:self action:@selector(backPreVC) image:@"return_image" hihImage:@"return_image_pressed"];
         viewController.navigationItem.leftBarButtonItem = backItem;
     }
     
     [super pushViewController:viewController animated:animated];
 }
+
+//- (UIViewController *)popViewControllerAnimated:(BOOL)animated {
+
+//    if (self.viewControllers.count == 1) {
+//        
+//    }
+    
+//  return [super popViewControllerAnimated:YES];
+//}
 
 - (void) backPreVC {
     

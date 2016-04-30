@@ -12,14 +12,11 @@
 
 + (UIBarButtonItem *)itemWithTarget:(id)target action:(SEL)action image:(NSString *)image hihImage:(NSString *)hihImage{
     
-    UIButton *btn = [[UIButton alloc] init];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [btn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
     [btn setBackgroundImage:[UIImage imageNamed:hihImage] forState:UIControlStateHighlighted];
     
-    CGSize size = btn.currentImage.size;
-    btn.bounds = CGRectMake(0, 0, size.width, size.height);
-    
-    [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
     
     return item;

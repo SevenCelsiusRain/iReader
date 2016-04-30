@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *layout;
 
+@property (nonatomic, strong) NSArray *arrayHPList;
 
 @end
 
@@ -25,17 +26,13 @@
     
     if (!_dataSource) {
         
-        NSString *urlStr = [NSString stringWithFormat:BASE_URL, homeList];
         
-        [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
-            
             NSMutableArray *arrayM = [[NSMutableArray alloc] initWithCapacity:0];
+        
             
-            NSArray *array = dict[@"data"];
-            
-            for (int i = 0; i < array.count; i++) {
+            for (int i = 0; i < self.arrayHPList.count; i++) {
                 
-                NSString *str = [NSString stringWithFormat:homeDetail, array[i]];
+                NSString *str = [NSString stringWithFormat:homeDetail, self.arrayHPList[i]];
                 NSString *urlStr = [NSString stringWithFormat:BASE_URL, str];
                 
                 [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
@@ -50,12 +47,7 @@
                 
             }
             
-            _dataSource = array;
-            
-        } failure:^(NSError *error) {
-            
-        } isGet:YES];
-        
+            _dataSource = arrayM;
 
     }
     
@@ -83,12 +75,27 @@
     [super viewDidLoad];
     
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self initData];
     
     [self initView];
     
    }
+
+- (void) initData {
+    
+    NSString *urlStr = [NSString stringWithFormat:BASE_URL, homeList];
+    
+    [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
+        
+        self.arrayHPList = dict[@"data"];
+        
+    } failure:^(NSError *error) {
+        
+    } isGet:YES];
+    
+}
+
+
 
 - (void) initView {
     
@@ -115,19 +122,6 @@
 
 
 
-//- (void) initData {
-//    
-//    NSString *urlStr = [NSString stringWithFormat:@"%@%@", BASE_URL, homeList];
-//    
-//    [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
-//        
-//        self.dictHPList = dict[@"data"];
-//        
-//    } failure:^(NSError *error) {
-//        
-//    } isGet:YES];
-//
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

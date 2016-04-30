@@ -17,6 +17,31 @@ extern NSString * const homeDetail;
 
 // 阅读
 extern NSString * const reading;
+// 阅读banner
+extern NSString * const banner;
+// 连载内容
+extern NSString * const serialContent;
+// 连载推荐
+extern NSString * const serialRelated;
+// 连载评论
+extern NSString * const serialComment;
+
+
+// 问答内容
+extern NSString * const questionContent;
+// 问答推荐
+extern NSString * const questionRelated;
+// 问答评论
+extern NSString * const questionComment;
+
+
+// 短篇内容
+extern NSString * const essayContent;
+// 短篇推荐
+extern NSString * const essayRelated;
+// 短篇评论
+extern NSString * const essayComment;
+
 
 // 音乐列表
 extern NSString * const musicList;
