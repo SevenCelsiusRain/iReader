@@ -16,7 +16,7 @@ NSString * const homeList = @"/hp/idlist/0";
 NSString * const homeDetail = @"/hp/detail/%ld?";
 
 // 阅读
-NSString * const reading = @"/reading/index/0?";
+NSString * const reading = @"/reading/index/%ld?";
 // 阅读banner
 NSString * const banner = @"/reading/carousel/?";
 

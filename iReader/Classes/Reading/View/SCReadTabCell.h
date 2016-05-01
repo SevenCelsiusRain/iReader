@@ -8,6 +8,10 @@
 
 #import "SCBaseTableViewCell.h"
 
+@class SCCellModel;
 @interface SCReadTabCell : SCBaseTableViewCell
 
+@property (nonatomic, strong) SCCellModel *cellModel;
+
++ (id) readCellWithTableView:(UITableView *)tableView;
 @end

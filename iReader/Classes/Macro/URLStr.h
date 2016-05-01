@@ -10,6 +10,11 @@
 #define URLStr_h
 
 
+// 屏幕宽
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+// 屏幕高
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
 // 基础
 #define BASE_URL @"http://v3.wufazhuce.com:8000/api%@"
 

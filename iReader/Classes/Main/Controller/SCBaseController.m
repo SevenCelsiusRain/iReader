@@ -20,7 +20,7 @@
     [super viewDidLoad];
    
     
-    NSLog(@"++++++%lu", self.navigationController.viewControllers.count);
+   
     if (self.navigationController.viewControllers.count == 1) {
         
         UIBarButtonItem *searchItem = [UIBarButtonItem itemWithTarget:self action:@selector(searchAction) image:@"search" hihImage:@"search_pressed"];

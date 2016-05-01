@@ -7,18 +7,177 @@
 //
 
 #import "SCReadingController.h"
+#import "SCReadTabCell.h"
+#import "SDCycleScrollView.h"
 
-@interface SCReadingController ()
+#import "SCReadingModel.h"
+#import "SCBaseContentModel.h"
+#import "SCBannerModel.h"
+
+@interface SCReadingController ()<UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataSource;
+
+@property (nonatomic, strong) NSMutableArray *bannerArrayM;
+@property (nonatomic, strong) NSMutableArray *imgsURLArrayM;
+@property (nonatomic, strong) SDCycleScrollView *headerView;
+
 
 @end
 
 @implementation SCReadingController
 
+- (UITableView *)tableView {
+    
+    if (!_tableView) {
+        
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    }
+    
+    return _tableView;
+}
+
+- (NSArray *)dataSource {
+    
+    if (!_dataSource) {
+        
+        NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:0];
+        
+        NSString *str = [NSString stringWithFormat:reading, 0];
+        NSString *urlStr = [NSString stringWithFormat:BASE_URL, str];
+        
+        [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
+            
+            
+            for (NSDictionary *temp in dict[@"data"]) {
+                
+                SCReadingModel *model = [SCReadingModel readModelWithDict:temp];
+                
+                [arrayM addObject:model];
+            }
+            
+            _dataSource = arrayM;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+               
+                [self.tableView reloadData];
+            });
+            
+        } failure:^(NSError *error) {
+            
+            
+        } isGet:YES];
+        
+    }
+    
+    return _dataSource;
+}
+
+- (NSMutableArray *)imgsURLArrayM {
+    
+    if (!_bannerArrayM) {
+        
+        NSString *urlStr = [NSString stringWithFormat:BASE_URL, banner];
+        
+        _bannerArrayM = [NSMutableArray arrayWithCapacity:0];
+        _imgsURLArrayM = [NSMutableArray arrayWithCapacity:0];
+        [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
+            
+            for (NSDictionary *temp in dict[@"data"]) {
+                
+                SCBannerModel *bannerModel = [[SCBannerModel alloc] initWithDictionary:temp error:nil];
+                [_bannerArrayM addObject:bannerModel];
+                [_imgsURLArrayM addObject:bannerModel.cover];
+            }
+            
+            self.headerView.imageURLStringsGroup = _imgsURLArrayM;
+            
+        } failure:^(NSError *error) {
+            
+        } isGet:YES];
+        
+    }
+    
+    return _imgsURLArrayM;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self initView];
    
+}
+
+- (void) initView {
+    
+    
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 200) delegate:self placeholderImage:nil];
+    cycleScrollView.delegate = self;
+    cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+    cycleScrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
+    cycleScrollView.imageURLStringsGroup = self.imgsURLArrayM;
+    
+    self.tableView.tableHeaderView = cycleScrollView;
+    
+    self.headerView = cycleScrollView;
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self.view addSubview:self.tableView];
+    
+}
+
+
+#pragma mark - banner跳转
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    
+    
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SCReadTabCell *cell = [SCReadTabCell readCellWithTableView:tableView];
+    
+    SCReadingModel *readModel = self.dataSource[indexPath.section];
+    
+    SCCellModel *cellModel = readModel.items[indexPath.row];
+    
+    return cell;
+    
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    SCReadingModel *readModel = self.dataSource[section];
+    
+    return readModel.items.count;
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return self.dataSource.count;
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    SCReadingModel *model = self.dataSource[section];
+    
+    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH, 40)];
+    lable.backgroundColor = [UIColor colorWithRed:221/255.f green:221/255.f blue:221/255.f alpha:1];
+    lable.text = [NSString stringWithFormat:@"    %@", model.date];
+    return lable;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 100;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 40;
 }
 
 - (void)didReceiveMemoryWarning {

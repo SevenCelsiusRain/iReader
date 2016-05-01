@@ -10,23 +10,13 @@
 
 @interface SCReadingModel : SCBaseModel
 
-@property (nonatomic, strong) NSArray *data;
+@property (nonatomic, copy) NSString *date; // 时间
+@property (nonatomic, strong) NSArray *items; // 组
 
 + (id) readModelWithDict:(NSDictionary *)dict;
 
 @end
 
-/***
- 组建模
- */
-@interface SCSectionModel : SCBaseModel
-
-@property (nonatomic, copy) NSString *date; // 时间
-@property (nonatomic, strong) NSArray *items; // 组
-
-+ (id) sectionModelWithDict:(NSDictionary *)dict;
-
-@end
 
 /***
  

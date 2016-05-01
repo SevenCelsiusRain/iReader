@@ -10,12 +10,6 @@
 
 @interface SCBaseModel : JSONModel
 
-//@property (nonatomic, copy) NSString *as;
-//
-//
-//@property (nonatomic, copy) NSString<Optional> *sa;
-//
-//
-//@property (nonatomic, readonly, copy) NSString *pp;
+
 
 @end

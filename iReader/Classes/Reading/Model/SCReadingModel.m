@@ -16,29 +16,6 @@
     
     SCReadingModel *model = [[SCReadingModel alloc] initWithDictionary:dict error:nil];
     
-    NSMutableArray *arrayM = [NSMutableArray arrayWithCapacity:0];
-    
-    for (NSDictionary *temp in model.data) {
-        
-        SCSectionModel *sectionModel = [SCSectionModel sectionModelWithDict:temp];
-        [arrayM addObject:sectionModel];
-    }
-    
-    model.data = arrayM;
-    
-    return model;
-    
-}
-
-@end
-
-#pragma mark - 组建模
-@implementation SCSectionModel
-
-+ (id)sectionModelWithDict:(NSDictionary *)dict {
-    
-    SCSectionModel *model = [[SCSectionModel alloc] initWithDictionary:dict error:nil];
-    
     NSMutableArray *arrM = [NSMutableArray arrayWithCapacity:0];
     for (NSDictionary *temp in model.items) {
         
@@ -47,6 +24,7 @@
     }
     
     model.items = arrM;
+
     
     return model;
     

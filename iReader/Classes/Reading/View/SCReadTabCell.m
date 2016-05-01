@@ -7,6 +7,10 @@
 //
 
 #import "SCReadTabCell.h"
+#import "SCReadingModel.h"
+#import "SCQuestionModel.h"
+#import "SCSerialModel.h"
+#import "SCEssayModel.h"
 
 @interface SCReadTabCell ()
 
@@ -21,7 +25,53 @@
 
 @end
 
-
 @implementation SCReadTabCell
+
++ (id)readCellWithTableView:(UITableView *)tableView {
+    
+    return [self tableCellWithTableView:tableView];
+}
+
+
+- (void)setCellModel:(SCCellModel *)cellModel {
+    
+    _cellModel = cellModel;
+    
+    NSString *imgName;
+    NSString *title;
+    NSString *writerStr;
+    NSString *content;
+    
+    switch (cellModel.type) {
+        case 1:
+        {
+            
+            SCEssayModel *model = (SCEssayModel *)cellModel.contentModel;
+            imgName = model.
+            break;
+        }
+            
+        case 2:
+        {
+            SCSerialModel *model = (SCSerialModel *)cellModel.contentModel;
+            break;
+        }
+            
+        case 3:
+        {
+            
+            SCQuestionModel *model = (SCQuestionModel *)cellModel.contentModel;
+            break;
+
+        }
+            
+        default:
+            break;
+    }
+
+    
+}
+
+
 
 @end
