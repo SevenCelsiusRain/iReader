@@ -13,7 +13,7 @@
 // 首页列表
 NSString * const homeList = @"/hp/idlist/0";
 // 首页内容
-NSString * const homeDetail = @"/hp/detail/%ld?";
+NSString * const homeDetail = @"/hp/detail/%@?";
 
 // 阅读
 NSString * const reading = @"/reading/index/%ld?";

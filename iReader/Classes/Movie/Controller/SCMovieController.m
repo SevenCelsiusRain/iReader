@@ -119,6 +119,8 @@
     
     SCMovieDetailController *detailVC = [[SCMovieDetailController alloc] init];
     [self.navigationController pushViewController:detailVC animated:YES];
+    SCMovieModel *model = self.dataSource[indexPath.row];
+    detailVC.title = model.title;
     
 }
 

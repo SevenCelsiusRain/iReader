@@ -13,6 +13,7 @@
 @property (nonatomic, copy) NSString<Ignore> *ID; // 影片id
 @property (nonatomic, copy) NSString<Optional> *cover;    // 影片封面
 
+@property (nonatomic, copy) NSString<Optional> *title;
 @property (nonatomic, copy) NSString<Optional> *verse;
 @property (nonatomic, copy) NSString<Optional> *verse_en;
 @property (nonatomic, copy) NSString<Optional> *score;

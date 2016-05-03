@@ -31,6 +31,10 @@
 
 @implementation SCHomeCollectionCell
 
+- (void)awakeFromNib {
+    
+    [super awakeFromNib];
+}
 
 - (void)setHomeMdel:(SCHomeModel *)homeMdel {
     
@@ -42,6 +46,8 @@
     self.contentLab.text = homeMdel.hp_content;
     [self.praiseBtn setTitle:[NSString stringWithFormat:@"%ld", homeMdel.praisenum] forState:UIControlStateNormal];
     self.authorLab.text = homeMdel.hp_author;
+    
+    [SCNetWorkImage setImageWithBtn:self.imgBtn urlStr:homeMdel.hp_img_url plhImageType:PlhINillType];
     
 }
 

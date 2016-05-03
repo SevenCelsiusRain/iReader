@@ -29,6 +29,13 @@
         
             NSMutableArray *arrayM = [[NSMutableArray alloc] initWithCapacity:0];
         
+        
+        NSString *urlStr = [NSString stringWithFormat:BASE_URL, homeList];
+        
+        [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
+            
+            self.arrayHPList = dict[@"data"];
+            
             
             for (int i = 0; i < self.arrayHPList.count; i++) {
                 
@@ -37,8 +44,14 @@
                 
                 [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
                     
-                    SCHomeModel *model = [SCHomeModel homeModelWithDict:dict];
+                    SCHomeModel *model = [SCHomeModel homeModelWithDict:dict[@"data"]];
                     [arrayM addObject:model];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        [self.collectionView reloadData];
+                        
+                    });
                     
                 } failure:^(NSError *error) {
                     
@@ -47,6 +60,12 @@
                 
             }
             
+            
+        } failure:^(NSError *error) {
+            
+        } isGet:YES];
+
+        
             _dataSource = arrayM;
 
     }
@@ -60,11 +79,19 @@
     if (!_collectionView) {
         
         _layout = [[UICollectionViewFlowLayout alloc] init];
-        _layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        _layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
+        _layout.itemSize = CGSizeMake(375, 544);
+        
+        _layout.minimumInteritemSpacing = 0;
+        _layout.minimumLineSpacing = 0;
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:_layout];
+        _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.pagingEnabled = YES;
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.showsVerticalScrollIndicator = NO;
     }
     
     return _collectionView;
@@ -74,30 +101,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    [self initData];
-    
     [self initView];
     
    }
 
-- (void) initData {
-    
-    NSString *urlStr = [NSString stringWithFormat:BASE_URL, homeList];
-    
-    [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
-        
-        self.arrayHPList = dict[@"data"];
-        
-    } failure:^(NSError *error) {
-        
-    } isGet:YES];
-    
-}
-
-
 
 - (void) initView {
+    
+    
     
     
     [self.view addSubview:self.collectionView];
@@ -106,6 +117,7 @@
     
 }
 
+#pragma mark - 协议方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     return self.dataSource.count;
@@ -114,13 +126,11 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     SCHomeCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SCHomeCollectionCell class]) forIndexPath:indexPath];
-    
+    cell.homeMdel = self.dataSource[indexPath.row];
     
     return cell;
     
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {

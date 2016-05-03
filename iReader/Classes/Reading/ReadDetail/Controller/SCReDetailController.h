@@ -8,6 +8,9 @@
 
 #import "SCBaseController.h"
 
+@class SCCellModel;
 @interface SCReDetailController : SCBaseController
+
+@property (nonatomic, strong) SCCellModel *reCellModel;
 
 @end

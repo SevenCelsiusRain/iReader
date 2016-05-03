@@ -11,6 +11,7 @@
 #import "SCQuestionModel.h"
 #import "SCSerialModel.h"
 #import "SCEssayModel.h"
+#import "SCAuthorModel.h"
 
 @interface SCReadTabCell ()
 
@@ -47,13 +48,20 @@
         {
             
             SCEssayModel *model = (SCEssayModel *)cellModel.contentModel;
-            imgName = model.
+            imgName = @"essay_image";
+            title = model.hp_title;
+            writerStr = model.authorModel.user_name;
+            content = model.guide_word;
             break;
         }
             
         case 2:
         {
             SCSerialModel *model = (SCSerialModel *)cellModel.contentModel;
+            imgName = @"serial_image";
+            title = model.title;
+            writerStr = model.authorModel.user_name;
+            content = model.excerpt;
             break;
         }
             
@@ -61,6 +69,10 @@
         {
             
             SCQuestionModel *model = (SCQuestionModel *)cellModel.contentModel;
+            imgName = @"question_image";
+            title = model.question_title;
+            writerStr = model.answer_title;
+            content = model.answer_content;
             break;
 
         }
@@ -69,6 +81,10 @@
             break;
     }
 
+    self.typeImg.image = [UIImage imageNamed:imgName];
+    self.titleLab.text = title;
+    self.writerLab.text = writerStr;
+    self.contentLab.text = content;
     
 }
 

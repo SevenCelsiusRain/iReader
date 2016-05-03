@@ -9,6 +9,7 @@
 #import "SCReadingController.h"
 #import "SCReadTabCell.h"
 #import "SDCycleScrollView.h"
+#import "SCReDetailController.h"
 
 #import "SCReadingModel.h"
 #import "SCBaseContentModel.h"
@@ -143,6 +144,7 @@
     SCReadingModel *readModel = self.dataSource[indexPath.section];
     
     SCCellModel *cellModel = readModel.items[indexPath.row];
+    cell.cellModel = cellModel;
     
     return cell;
     
@@ -172,12 +174,25 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 100;
+    return 200;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
     return 40;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    SCReDetailController *detailVC = [[SCReDetailController alloc] init];
+    SCReadingModel *readModel = self.dataSource[indexPath.section];
+    
+    SCCellModel *cellModel = readModel.items[indexPath.row];
+
+    detailVC.reCellModel = cellModel;
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

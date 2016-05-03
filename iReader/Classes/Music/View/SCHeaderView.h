@@ -10,4 +10,5 @@
 
 @interface SCHeaderView : UIView
 
++ (id)musicHeaderView;
 @end
