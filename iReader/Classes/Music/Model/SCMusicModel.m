@@ -7,8 +7,19 @@
 //
 
 #import "SCMusicModel.h"
-
+#import "SCAuthorModel.h"
 
 @implementation SCMusicModel
+
++ (id)musicModelWithDict:(NSDictionary *)dict {
+    
+    
+    SCMusicModel *model = [[SCMusicModel alloc] initWithDictionary:dict error:nil];
+    model.ID = dict[@"id"];
+    model.author = [SCAuthorModel authorModelWithDict:dict[@"author"]];
+    
+    return model;
+    
+}
 
 @end

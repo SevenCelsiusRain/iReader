@@ -8,11 +8,12 @@
 
 #import "SCBaseModel.h"
 
+@class SCAuthorModel;
 @interface SCMusicModel : SCBaseModel
 
 @property (nonatomic, copy) NSString<Ignore> *ID;
 
-// 表题
+// 标题
 @property (nonatomic, copy) NSString *title;
 
 // 封面
@@ -40,16 +41,11 @@
 // 制作时间
 @property (nonatomic, copy) NSString *maketime;
 @property (nonatomic, copy) NSString *read_num;
-@property (nonatomic, copy) NSString *sharenum;
-@property (nonatomic, copy) NSString *commentnum;
+@property (nonatomic, assign) NSInteger sharenum;
+@property (nonatomic, assign) NSInteger commentnum;
 
-@property (nonatomic, copy) NSDictionary *author;
-@property (nonatomic, copy) NSString *user_id;
-@property (nonatomic, copy) NSString *user_name;
-@property (nonatomic, copy) NSString *desc;
+@property (nonatomic, copy) SCAuthorModel<Ignore> *author;
 
-
-//@property (nonatomic, copy) NSDictionary *story_author;
-//@property (nonatomic, copy) NSString *
++ (id)musicModelWithDict:(NSDictionary *)dict;
 
 @end

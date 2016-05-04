@@ -26,6 +26,11 @@
 		032725231CD4AC91007A094A /* SCFactoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725221CD4AC91007A094A /* SCFactoryModel.m */; };
 		0347E7921CD3F931008E4941 /* SCPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0347E7911CD3F931008E4941 /* SCPersonalController.m */; };
 		0347E7951CD3F977008E4941 /* SCSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0347E7941CD3F977008E4941 /* SCSearchController.m */; };
+		03588DA51CD91E4800230401 /* SCMusicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03588DA41CD91E4800230401 /* SCMusicHeader.m */; };
+		03588DA91CD9210B00230401 /* SCMusicHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03588DA81CD9210B00230401 /* SCMusicHeader.xib */; };
+		03588DAC1CD95D2700230401 /* SCSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03588DAB1CD95D2700230401 /* SCSectionHeader.m */; };
+		03588DAE1CD95D7100230401 /* SCSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03588DAD1CD95D7100230401 /* SCSectionHeader.xib */; };
+		03588DB11CD9623800230401 /* UIButton+SCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 03588DB01CD9623800230401 /* UIButton+SCExtension.m */; };
 		035D8CFF1CD5E604003574DC /* SCBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 035D8CFE1CD5E604003574DC /* SCBannerModel.m */; };
 		0362B32D1CCE92BA00B6E8FF /* SCMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B32C1CCE92BA00B6E8FF /* SCMovieController.m */; };
 		0362B3301CCE92D200B6E8FF /* SCMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0362B32F1CCE92D200B6E8FF /* SCMusicController.m */; };
@@ -37,8 +42,6 @@
 		036ADFF01CD2784000F9FE54 /* SCReadTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036ADFEF1CD2784000F9FE54 /* SCReadTabCell.xib */; };
 		036ADFF31CD27AC600F9FE54 /* SCMovieTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036ADFF21CD27AC600F9FE54 /* SCMovieTabCell.m */; };
 		036ADFF51CD27B2E00F9FE54 /* SCMovieTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036ADFF41CD27B2E00F9FE54 /* SCMovieTabCell.xib */; };
-		036ADFF81CD2863600F9FE54 /* SCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 036ADFF71CD2863600F9FE54 /* SCHeaderView.m */; };
-		036ADFFA1CD2864300F9FE54 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036ADFF91CD2864300F9FE54 /* View.xib */; };
 		036AE0021CD2BF0D00F9FE54 /* SCMuListColCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */; };
 		036AE0041CD2C14B00F9FE54 /* SCMuListColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */; };
 		036B0D411CD182AA00D8205F /* UIImage+SCOrgImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */; };
@@ -130,6 +133,14 @@
 		0347E7911CD3F931008E4941 /* SCPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPersonalController.m; sourceTree = "<group>"; };
 		0347E7931CD3F977008E4941 /* SCSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSearchController.h; sourceTree = "<group>"; };
 		0347E7941CD3F977008E4941 /* SCSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSearchController.m; sourceTree = "<group>"; };
+		03588DA31CD91E4800230401 /* SCMusicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMusicHeader.h; sourceTree = "<group>"; };
+		03588DA41CD91E4800230401 /* SCMusicHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMusicHeader.m; sourceTree = "<group>"; };
+		03588DA81CD9210B00230401 /* SCMusicHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCMusicHeader.xib; sourceTree = "<group>"; };
+		03588DAA1CD95D2700230401 /* SCSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSectionHeader.h; sourceTree = "<group>"; };
+		03588DAB1CD95D2700230401 /* SCSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSectionHeader.m; sourceTree = "<group>"; };
+		03588DAD1CD95D7100230401 /* SCSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCSectionHeader.xib; sourceTree = "<group>"; };
+		03588DAF1CD9623800230401 /* UIButton+SCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SCExtension.h"; sourceTree = "<group>"; };
+		03588DB01CD9623800230401 /* UIButton+SCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCExtension.m"; sourceTree = "<group>"; };
 		035D8CFD1CD5E604003574DC /* SCBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBannerModel.h; sourceTree = "<group>"; };
 		035D8CFE1CD5E604003574DC /* SCBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBannerModel.m; sourceTree = "<group>"; };
 		0362B32B1CCE92BA00B6E8FF /* SCMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieController.h; sourceTree = "<group>"; };
@@ -150,9 +161,6 @@
 		036ADFF11CD27AC600F9FE54 /* SCMovieTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieTabCell.h; sourceTree = "<group>"; };
 		036ADFF21CD27AC600F9FE54 /* SCMovieTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieTabCell.m; sourceTree = "<group>"; };
 		036ADFF41CD27B2E00F9FE54 /* SCMovieTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCMovieTabCell.xib; sourceTree = "<group>"; };
-		036ADFF61CD2863600F9FE54 /* SCHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHeaderView.h; sourceTree = "<group>"; };
-		036ADFF71CD2863600F9FE54 /* SCHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHeaderView.m; sourceTree = "<group>"; };
-		036ADFF91CD2864300F9FE54 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		036AE0001CD2BF0D00F9FE54 /* SCMuListColCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMuListColCell.h; sourceTree = "<group>"; };
 		036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMuListColCell.m; sourceTree = "<group>"; };
 		036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCMuListColCell.xib; sourceTree = "<group>"; };
@@ -548,6 +556,8 @@
 				0362B3351CCEDB4700B6E8FF /* UIBarButtonItem+SCExtension.m */,
 				036B0D3F1CD182AA00D8205F /* UIImage+SCOrgImg.h */,
 				036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */,
+				03588DAF1CD9623800230401 /* UIButton+SCExtension.h */,
+				03588DB01CD9623800230401 /* UIButton+SCExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -600,6 +610,9 @@
 				03709D131CD877B100608917 /* SCCommentTabCell.h */,
 				03709D141CD877B100608917 /* SCCommentTabCell.m */,
 				03709D161CD877DE00608917 /* SCCommentTabCell.xib */,
+				03588DAA1CD95D2700230401 /* SCSectionHeader.h */,
+				03588DAB1CD95D2700230401 /* SCSectionHeader.m */,
+				03588DAD1CD95D7100230401 /* SCSectionHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,9 +687,9 @@
 		03A783BF1CCDC4D9005D51FC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				036ADFF61CD2863600F9FE54 /* SCHeaderView.h */,
-				036ADFF71CD2863600F9FE54 /* SCHeaderView.m */,
-				036ADFF91CD2864300F9FE54 /* View.xib */,
+				03588DA31CD91E4800230401 /* SCMusicHeader.h */,
+				03588DA41CD91E4800230401 /* SCMusicHeader.m */,
+				03588DA81CD9210B00230401 /* SCMusicHeader.xib */,
 				036AE0001CD2BF0D00F9FE54 /* SCMuListColCell.h */,
 				036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */,
 				036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */,
@@ -921,7 +934,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				036ADFFA1CD2864300F9FE54 /* View.xib in Resources */,
 				036ADFF51CD27B2E00F9FE54 /* SCMovieTabCell.xib in Resources */,
 				031DB0F81CD0406D0084EB1D /* SCHomeCollectionCell.xib in Resources */,
 				03709D1F1CD87D3600608917 /* SCQuDetailHeader.xib in Resources */,
@@ -930,7 +942,9 @@
 				03D7D91E1CCD3B03003112C8 /* Assets.xcassets in Resources */,
 				03709D2C1CD89C8D00608917 /* SCMoDetailHeader.xib in Resources */,
 				036ADFF01CD2784000F9FE54 /* SCReadTabCell.xib in Resources */,
+				03588DA91CD9210B00230401 /* SCMusicHeader.xib in Resources */,
 				03D7D91C1CCD3B03003112C8 /* Main.storyboard in Resources */,
+				03588DAE1CD95D7100230401 /* SCSectionHeader.xib in Resources */,
 				03709D341CD8A02F00608917 /* SCModetailCell.xib in Resources */,
 				036AE0041CD2C14B00F9FE54 /* SCMuListColCell.xib in Resources */,
 				03709D211CD8832800608917 /* SCOtherHeader.xib in Resources */,
@@ -1009,11 +1023,12 @@
 				0327250E1CD49043007A094A /* SCReDetailController.m in Sources */,
 				031DB0FE1CD043570084EB1D /* SCMusicModel.m in Sources */,
 				032725071CD481CD007A094A /* SCMoDetailModel.m in Sources */,
-				036ADFF81CD2863600F9FE54 /* SCHeaderView.m in Sources */,
 				031DB0F31CD03D0A0084EB1D /* SCHomeModel.m in Sources */,
+				03588DA51CD91E4800230401 /* SCMusicHeader.m in Sources */,
 				03A783E31CCDEA66005D51FC /* SCBaseTableViewCell.m in Sources */,
 				036ADFEE1CD2782900F9FE54 /* SCReadTabCell.m in Sources */,
 				0347E7921CD3F931008E4941 /* SCPersonalController.m in Sources */,
+				03588DAC1CD95D2700230401 /* SCSectionHeader.m in Sources */,
 				032725171CD4A947007A094A /* SCBaseContentModel.m in Sources */,
 				03A783D11CCDDA69005D51FC /* SCNetAPI.m in Sources */,
 				03A783CC1CCDD716005D51FC /* SCBaseController.m in Sources */,
@@ -1022,6 +1037,7 @@
 				0362B3301CCE92D200B6E8FF /* SCMusicController.m in Sources */,
 				032725201CD4A9AD007A094A /* SCEssayModel.m in Sources */,
 				03709D151CD877B100608917 /* SCCommentTabCell.m in Sources */,
+				03588DB11CD9623800230401 /* UIButton+SCExtension.m in Sources */,
 				03A783D71CCDE7E8005D51FC /* SCHomeController.m in Sources */,
 				031DB0FB1CD0433C0084EB1D /* SCReadingModel.m in Sources */,
 				0327251D1CD4A995007A094A /* SCSerialModel.m in Sources */,
