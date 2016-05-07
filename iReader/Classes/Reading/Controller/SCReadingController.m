@@ -14,6 +14,7 @@
 #import "SCReadingModel.h"
 #import "SCBaseContentModel.h"
 #import "SCBannerModel.h"
+#import "SCBannerController.h"
 
 @interface SCReadingController ()<UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate>
 
@@ -87,7 +88,7 @@
             
             for (NSDictionary *temp in dict[@"data"]) {
                 
-                SCBannerModel *bannerModel = [[SCBannerModel alloc] initWithDictionary:temp error:nil];
+                SCBannerModel *bannerModel = [SCBannerModel bannerModelWithDict:temp];
                 [_bannerArrayM addObject:bannerModel];
                 [_imgsURLArrayM addObject:bannerModel.cover];
             }
@@ -134,6 +135,9 @@
 #pragma mark - banner跳转
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
     
+    SCBannerController *bannerVC = [[SCBannerController alloc] init];
+    bannerVC.bannerModel = self.bannerArrayM[index];
+    [self.navigationController pushViewController:bannerVC animated:YES];
     
 }
 
@@ -182,6 +186,7 @@
     return 40;
 }
 
+// cell 跳转
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
@@ -190,7 +195,7 @@
     
     SCCellModel *cellModel = readModel.items[indexPath.row];
 
-    detailVC.reCellModel = cellModel;
+    detailVC.type = cellModel.type;
     
     [self.navigationController pushViewController:detailVC animated:YES];
 }

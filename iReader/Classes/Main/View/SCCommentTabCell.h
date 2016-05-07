@@ -8,6 +8,11 @@
 
 #import "SCBaseTableViewCell.h"
 
+@class SCCommentModel;
 @interface SCCommentTabCell : SCBaseTableViewCell
+
+@property (nonatomic, strong) SCCommentModel *commentModel;
+
++ (id) commentTabCellWithTableView:(UITableView *)tableView;
 
 @end

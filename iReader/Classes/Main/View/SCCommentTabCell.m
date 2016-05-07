@@ -7,6 +7,8 @@
 //
 
 #import "SCCommentTabCell.h"
+#import "SCCommentModel.h"
+#import "SCUserModel.h"
 
 @interface SCCommentTabCell ()
 
@@ -29,6 +31,28 @@
 @end
 
 @implementation SCCommentTabCell
+
++ (id)commentTabCellWithTableView:(UITableView *)tableView {
+    
+    
+    return [self tableCellWithTableView:tableView];
+}
+
+
+- (void)setCommentModel:(SCCommentModel *)commentModel {
+    
+    _commentModel = commentModel;
+    
+    self.contentL.text = commentModel.content;
+    self.timeL.text = commentModel.input_date;
+    [self.praiseBtn setImage:[UIImage imageNamed:@"laud_pressed"] forState:UIControlStateNormal];
+    [self.praiseBtn setTitle:[NSString stringWithFormat:@"%ld", commentModel.praisenum] forState:UIControlStateNormal];
+    SCUserModel *user = commentModel.user;
+    [self.userNameL setTitle:user.user_name forState:UIControlStateNormal];
+    [SCNetWorkImage setImageWithBtn:self.iconBtn urlStr:user.web_url plhImageType:PlhINillType];
+    
+    
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

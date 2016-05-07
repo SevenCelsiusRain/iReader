@@ -12,5 +12,6 @@
 @interface SCReDetailController : SCBaseController
 
 @property (nonatomic, strong) SCCellModel *reCellModel;
+@property (nonatomic, assign) NSInteger type;
 
 @end

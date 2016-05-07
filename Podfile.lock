@@ -25,6 +25,7 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - UMengSocial (5.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.0)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDCycleScrollView (~> 1.64)
   - SDWebImage (~> 3.7)
+  - UMengSocial (~> 5.0)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
@@ -43,5 +45,6 @@ SPEC CHECKSUMS:
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDCycleScrollView: 806fedb9342ab03b58b84442f985517b42c7cbb7
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
 
 COCOAPODS: 0.39.0

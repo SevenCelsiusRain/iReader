@@ -8,44 +8,13 @@
 
 #import "SCBaseModel.h"
 
-@class SCAuthorModel;
+@class SCMuDetailModel;
 @interface SCMusicModel : SCBaseModel
 
-@property (nonatomic, copy) NSString<Ignore> *ID;
+@property (nonatomic, copy) NSString<Ignore> *musicID;
+@property (nonatomic, copy) SCMuDetailModel<Ignore> *detailModel;
+@property (nonatomic, strong) NSMutableArray<Ignore> *relatedArrayM;
+@property (nonatomic, strong) NSMutableArray<Ignore> *commentArrayM;
 
-// 标题
-@property (nonatomic, copy) NSString *title;
-
-// 封面
-@property (nonatomic, copy) NSString *cover;
-@property (nonatomic, copy) NSString *isfirst;
-
-// 故事标题
-@property (nonatomic, copy) NSString *story_title;
-// 故事
-@property (nonatomic, copy) NSString *story;
-// 歌词
-@property (nonatomic, copy) NSString *lyric;
-
-// 歌曲信息
-@property (nonatomic, copy) NSString *info;
-@property (nonatomic, copy) NSString *platform;
-
-// 歌曲链接
-@property (nonatomic, copy) NSString *music_id;
-
-// 编辑
-@property (nonatomic, copy) NSString *charge_edt;
-// 点赞数
-@property (nonatomic, copy) NSString *praisenum;
-// 制作时间
-@property (nonatomic, copy) NSString *maketime;
-@property (nonatomic, copy) NSString *read_num;
-@property (nonatomic, assign) NSInteger sharenum;
-@property (nonatomic, assign) NSInteger commentnum;
-
-@property (nonatomic, copy) SCAuthorModel<Ignore> *author;
-
-+ (id)musicModelWithDict:(NSDictionary *)dict;
-
++ (void) musicModelWithStr:(NSString *)str musicModel:(void(^)(SCMusicModel *model))musicModel;
 @end

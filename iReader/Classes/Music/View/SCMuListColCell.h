@@ -8,6 +8,9 @@
 
 #import "SCBaseCollectionCell.h"
 
+@class SCMuRelatedModel;
 @interface SCMuListColCell : SCBaseCollectionCell
+
+@property (nonatomic, strong) SCMuRelatedModel *model;
 
 @end

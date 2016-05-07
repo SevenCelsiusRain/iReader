@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class SCMusicModel;
+@class SCMuDetailModel;
 @interface SCMusicHeader : UIView
 
-@property (nonatomic, strong) SCMusicModel *musicModel;
+@property (nonatomic, strong) SCMuDetailModel *headerModel;
 
 + (id)musicHeaderView;
 

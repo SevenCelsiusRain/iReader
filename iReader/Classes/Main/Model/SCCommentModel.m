@@ -16,8 +16,8 @@
     SCCommentModel *model = [[SCCommentModel alloc] initWithDictionary:dict error:nil];
     
     model.ID = dict[@"id"];
-    model.user = dict[@"user"];
-    model.toUser = dict[@"touser"];
+    model.user = [SCUserModel userModelWithDict:dict[@"user"]];
+    model.toUser = [SCUserModel userModelWithDict:dict[@"touser"]];
     
     return model;
     

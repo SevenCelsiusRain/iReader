@@ -19,6 +19,8 @@ extern NSString * const homeDetail;
 extern NSString * const reading;
 // 阅读banner
 extern NSString * const banner;
+// banner 点击后详情
+extern NSString * const bannerDetail;
 // 连载内容
 extern NSString * const serialContent;
 // 连载推荐
@@ -47,6 +49,10 @@ extern NSString * const essayComment;
 extern NSString * const musicList;
 // 音乐内容
 extern NSString * const musicDetail;
+// 音乐评论
+extern NSString * const musicComment;
+// 音乐推荐
+extern NSString * const musicRelated;
 
 // 电影列表
 extern NSString * const movieList;

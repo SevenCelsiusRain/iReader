@@ -54,10 +54,10 @@
 - (void)initView {
     
     NSString *title;
-    if (self.reCellModel.type == 1) {
+    if (self.type == 1) {
         
         title = @"短篇";
-    }else if (self.reCellModel.type == 2) {
+    }else if (self.type == 2) {
         
         title = @"连载";
     } else {
@@ -65,6 +65,14 @@
         title = @"问题";
         
     }
+    
+    self.navigationController.toolbarHidden = NO;
+    
+    UIBarButtonItem *praise = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"laud_pressed"] style:UIBarButtonItemStyleDone target:self action:nil];
+    UIBarButtonItem *comment = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"comment_image"] style:UIBarButtonItemStyleDone target:self action:nil];
+    UIBarButtonItem *share = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"share_image"] style:UIBarButtonItemStyleDone target:self action:nil];
+    UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    self.toolbarItems = @[flexible, praise, flexible, comment, flexible, share, flexible];
     
     self.title = title;
     
@@ -88,6 +96,12 @@
     
     
     return self.dataSource.count;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    
+    self.navigationController.toolbarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {

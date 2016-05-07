@@ -6,3 +6,5 @@ pod 'MJRefresh'
 pod 'SDWebImage', '~>3.7'
 pod 'Masonry'
 pod 'SDCycleScrollView','~>1.64'
+pod 'UMengSocial', '~>5.0'
+

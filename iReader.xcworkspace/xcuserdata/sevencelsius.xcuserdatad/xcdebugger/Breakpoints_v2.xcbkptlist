@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iReader/Classes/Home/View/SCHomeCollectionCell.m"
-            timestampString = "483942951.510037"
+            filePath = "iReader/Classes/Music/View/SCFactoryCell.m"
+            timestampString = "484313928.401482"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-setHomeMdel:"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "+factoryCellWithTableView:indexPath:dataArray:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iReader/Classes/Main/NetWork/SCNetWorkImage.m"
-            timestampString = "483943216.222145"
+            filePath = "iReader/Classes/Music/View/SCFactoryCell.m"
+            timestampString = "484313933.801444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "+setImageWithBtn:urlStr:plhImageType:"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "+factoryCellWithTableView:indexPath:dataArray:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iReader/Classes/Music/View/SCFactoryCell.m"
+            timestampString = "484313935.873539"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "+factoryCellWithTableView:indexPath:dataArray:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iReader/Classes/Music/View/SCFactoryCell.m"
+            timestampString = "484313942.105573"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "+factoryCellWithTableView:indexPath:dataArray:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -15,6 +15,7 @@
 		031DB0FB1CD0433C0084EB1D /* SCReadingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0FA1CD0433C0084EB1D /* SCReadingModel.m */; };
 		031DB0FE1CD043570084EB1D /* SCMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB0FD1CD043570084EB1D /* SCMusicModel.m */; };
 		031DB1011CD0436E0084EB1D /* SCMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 031DB1001CD0436E0084EB1D /* SCMovieModel.m */; };
+		032185891CDB289F00DBBA74 /* UIColor+SCColorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 032185881CDB289F00DBBA74 /* UIColor+SCColorExtension.m */; };
 		032725041CD4455E007A094A /* SCMovieDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725031CD4455E007A094A /* SCMovieDetailController.m */; };
 		032725071CD481CD007A094A /* SCMoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725061CD481CD007A094A /* SCMoDetailModel.m */; };
 		0327250E1CD49043007A094A /* SCReDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0327250D1CD49043007A094A /* SCReDetailController.m */; };
@@ -24,6 +25,9 @@
 		0327251D1CD4A995007A094A /* SCSerialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0327251C1CD4A995007A094A /* SCSerialModel.m */; };
 		032725201CD4A9AD007A094A /* SCEssayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0327251F1CD4A9AD007A094A /* SCEssayModel.m */; };
 		032725231CD4AC91007A094A /* SCFactoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 032725221CD4AC91007A094A /* SCFactoryModel.m */; };
+		033760681CDBC17E003F860A /* SCMuRelatedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 033760671CDBC17E003F860A /* SCMuRelatedModel.m */; };
+		0337606B1CDBC788003F860A /* SCMuDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0337606A1CDBC788003F860A /* SCMuDetailModel.m */; };
+		0337606E1CDBC90C003F860A /* SCMusicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0337606D1CDBC90C003F860A /* SCMusicCollectionCell.m */; };
 		0347E7921CD3F931008E4941 /* SCPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0347E7911CD3F931008E4941 /* SCPersonalController.m */; };
 		0347E7951CD3F977008E4941 /* SCSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0347E7941CD3F977008E4941 /* SCSearchController.m */; };
 		03588DA51CD91E4800230401 /* SCMusicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03588DA41CD91E4800230401 /* SCMusicHeader.m */; };
@@ -45,6 +49,12 @@
 		036AE0021CD2BF0D00F9FE54 /* SCMuListColCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */; };
 		036AE0041CD2C14B00F9FE54 /* SCMuListColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */; };
 		036B0D411CD182AA00D8205F /* UIImage+SCOrgImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */; };
+		036B47B51CDDCDA8005CD18F /* SCMuStoryTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B47B41CDDCDA8005CD18F /* SCMuStoryTabCell.m */; };
+		036B47B91CDDCE6C005CD18F /* SCMuStoryTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036B47B81CDDCE6C005CD18F /* SCMuStoryTabCell.xib */; };
+		036B47BD1CDDDC02005CD18F /* SCMuRelatedTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B47BC1CDDDC02005CD18F /* SCMuRelatedTabCell.m */; };
+		036B47C01CDDE1BA005CD18F /* SCFactoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B47BF1CDDE1BA005CD18F /* SCFactoryCell.m */; };
+		036B47C51CDE0268005CD18F /* SCRelatedDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B47C41CDE0268005CD18F /* SCRelatedDetailController.m */; };
+		036B47C81CDE05CF005CD18F /* UIView+SCExtent.m in Sources */ = {isa = PBXBuildFile; fileRef = 036B47C71CDE05CF005CD18F /* UIView+SCExtent.m */; };
 		03709D0C1CD8171800608917 /* SCQuDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03709D0B1CD8171800608917 /* SCQuDetailModel.m */; };
 		03709D0F1CD817B100608917 /* SCEsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03709D0E1CD817B100608917 /* SCEsDetailModel.m */; };
 		03709D121CD817DF00608917 /* SCSeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03709D111CD817DF00608917 /* SCSeDetailModel.m */; };
@@ -61,6 +71,10 @@
 		03709D321CD8A01A00608917 /* SCModetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03709D311CD8A01A00608917 /* SCModetailCell.m */; };
 		03709D341CD8A02F00608917 /* SCModetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03709D331CD8A02F00608917 /* SCModetailCell.xib */; };
 		03709D371CD8A16B00608917 /* SCMoStoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03709D361CD8A16B00608917 /* SCMoStoryModel.m */; };
+		0377C06F1CDABE380002B953 /* SCBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0377C06E1CDABE380002B953 /* SCBannerController.m */; };
+		0377C0721CDAC1C80002B953 /* SCBannerDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0377C0711CDAC1C80002B953 /* SCBannerDetailModel.m */; };
+		0377C07C1CDAC7490002B953 /* SCBaDetailTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0377C07B1CDAC7490002B953 /* SCBaDetailTabCell.m */; };
+		0377C07E1CDAC76F0002B953 /* SCBaDetailTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0377C07D1CDAC76F0002B953 /* SCBaDetailTabCell.xib */; };
 		03A783C41CCDC4D9005D51FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A783B51CCDC4D9005D51FC /* AppDelegate.m */; };
 		03A783C51CCDC4D9005D51FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A783B61CCDC4D9005D51FC /* main.m */; };
 		03A783CC1CCDD716005D51FC /* SCBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A783CB1CCDD716005D51FC /* SCBaseController.m */; };
@@ -111,6 +125,8 @@
 		031DB0FD1CD043570084EB1D /* SCMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMusicModel.m; sourceTree = "<group>"; };
 		031DB0FF1CD0436E0084EB1D /* SCMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieModel.h; sourceTree = "<group>"; };
 		031DB1001CD0436E0084EB1D /* SCMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieModel.m; sourceTree = "<group>"; };
+		032185871CDB289F00DBBA74 /* UIColor+SCColorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCColorExtension.h"; sourceTree = "<group>"; };
+		032185881CDB289F00DBBA74 /* UIColor+SCColorExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCColorExtension.m"; sourceTree = "<group>"; };
 		032725021CD4455E007A094A /* SCMovieDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMovieDetailController.h; sourceTree = "<group>"; };
 		032725031CD4455E007A094A /* SCMovieDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMovieDetailController.m; sourceTree = "<group>"; };
 		032725051CD481CD007A094A /* SCMoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMoDetailModel.h; sourceTree = "<group>"; };
@@ -129,6 +145,12 @@
 		0327251F1CD4A9AD007A094A /* SCEssayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCEssayModel.m; sourceTree = "<group>"; };
 		032725211CD4AC91007A094A /* SCFactoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFactoryModel.h; sourceTree = "<group>"; };
 		032725221CD4AC91007A094A /* SCFactoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFactoryModel.m; sourceTree = "<group>"; };
+		033760661CDBC17E003F860A /* SCMuRelatedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMuRelatedModel.h; sourceTree = "<group>"; };
+		033760671CDBC17E003F860A /* SCMuRelatedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMuRelatedModel.m; sourceTree = "<group>"; };
+		033760691CDBC788003F860A /* SCMuDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMuDetailModel.h; sourceTree = "<group>"; };
+		0337606A1CDBC788003F860A /* SCMuDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMuDetailModel.m; sourceTree = "<group>"; };
+		0337606C1CDBC90C003F860A /* SCMusicCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMusicCollectionCell.h; sourceTree = "<group>"; };
+		0337606D1CDBC90C003F860A /* SCMusicCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMusicCollectionCell.m; sourceTree = "<group>"; };
 		0347E7901CD3F931008E4941 /* SCPersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPersonalController.h; sourceTree = "<group>"; };
 		0347E7911CD3F931008E4941 /* SCPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPersonalController.m; sourceTree = "<group>"; };
 		0347E7931CD3F977008E4941 /* SCSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSearchController.h; sourceTree = "<group>"; };
@@ -167,6 +189,17 @@
 		036B0D3F1CD182AA00D8205F /* UIImage+SCOrgImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCOrgImg.h"; sourceTree = "<group>"; };
 		036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCOrgImg.m"; sourceTree = "<group>"; };
 		036B0D871CD1A06B00D8205F /* URLStr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLStr.h; sourceTree = "<group>"; };
+		036B47B31CDDCDA8005CD18F /* SCMuStoryTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMuStoryTabCell.h; sourceTree = "<group>"; };
+		036B47B41CDDCDA8005CD18F /* SCMuStoryTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMuStoryTabCell.m; sourceTree = "<group>"; };
+		036B47B81CDDCE6C005CD18F /* SCMuStoryTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCMuStoryTabCell.xib; sourceTree = "<group>"; };
+		036B47BB1CDDDC02005CD18F /* SCMuRelatedTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMuRelatedTabCell.h; sourceTree = "<group>"; };
+		036B47BC1CDDDC02005CD18F /* SCMuRelatedTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMuRelatedTabCell.m; sourceTree = "<group>"; };
+		036B47BE1CDDE1BA005CD18F /* SCFactoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFactoryCell.h; sourceTree = "<group>"; };
+		036B47BF1CDDE1BA005CD18F /* SCFactoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFactoryCell.m; sourceTree = "<group>"; };
+		036B47C31CDE0268005CD18F /* SCRelatedDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRelatedDetailController.h; sourceTree = "<group>"; };
+		036B47C41CDE0268005CD18F /* SCRelatedDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRelatedDetailController.m; sourceTree = "<group>"; };
+		036B47C61CDE05CF005CD18F /* UIView+SCExtent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SCExtent.h"; sourceTree = "<group>"; };
+		036B47C71CDE05CF005CD18F /* UIView+SCExtent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SCExtent.m"; sourceTree = "<group>"; };
 		03709D0A1CD8171800608917 /* SCQuDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCQuDetailModel.h; sourceTree = "<group>"; };
 		03709D0B1CD8171800608917 /* SCQuDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCQuDetailModel.m; sourceTree = "<group>"; };
 		03709D0D1CD817B100608917 /* SCEsDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCEsDetailModel.h; sourceTree = "<group>"; };
@@ -194,6 +227,13 @@
 		03709D331CD8A02F00608917 /* SCModetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCModetailCell.xib; sourceTree = "<group>"; };
 		03709D351CD8A16B00608917 /* SCMoStoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMoStoryModel.h; sourceTree = "<group>"; };
 		03709D361CD8A16B00608917 /* SCMoStoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMoStoryModel.m; sourceTree = "<group>"; };
+		0377C06D1CDABE380002B953 /* SCBannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBannerController.h; sourceTree = "<group>"; };
+		0377C06E1CDABE380002B953 /* SCBannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBannerController.m; sourceTree = "<group>"; };
+		0377C0701CDAC1C80002B953 /* SCBannerDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBannerDetailModel.h; sourceTree = "<group>"; };
+		0377C0711CDAC1C80002B953 /* SCBannerDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBannerDetailModel.m; sourceTree = "<group>"; };
+		0377C07A1CDAC7490002B953 /* SCBaDetailTabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBaDetailTabCell.h; sourceTree = "<group>"; };
+		0377C07B1CDAC7490002B953 /* SCBaDetailTabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBaDetailTabCell.m; sourceTree = "<group>"; };
+		0377C07D1CDAC76F0002B953 /* SCBaDetailTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCBaDetailTabCell.xib; sourceTree = "<group>"; };
 		03A783B41CCDC4D9005D51FC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		03A783B51CCDC4D9005D51FC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		03A783B61CCDC4D9005D51FC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -458,6 +498,8 @@
 			children = (
 				035D8CFD1CD5E604003574DC /* SCBannerModel.h */,
 				035D8CFE1CD5E604003574DC /* SCBannerModel.m */,
+				0377C0701CDAC1C80002B953 /* SCBannerDetailModel.h */,
+				0377C0711CDAC1C80002B953 /* SCBannerDetailModel.m */,
 			);
 			name = BannerModel;
 			sourceTree = "<group>";
@@ -471,6 +513,50 @@
 				0362B33C1CCEEAD600B6E8FF /* SCNetWorkAFRequest.m */,
 			);
 			path = NetWork;
+			sourceTree = "<group>";
+		};
+		036B47B61CDDCDD3005CD18F /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				03588DA31CD91E4800230401 /* SCMusicHeader.h */,
+				03588DA41CD91E4800230401 /* SCMusicHeader.m */,
+				03588DA81CD9210B00230401 /* SCMusicHeader.xib */,
+			);
+			name = HeaderView;
+			sourceTree = "<group>";
+		};
+		036B47B71CDDCE00005CD18F /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				036B47B31CDDCDA8005CD18F /* SCMuStoryTabCell.h */,
+				036B47B41CDDCDA8005CD18F /* SCMuStoryTabCell.m */,
+				036B47B81CDDCE6C005CD18F /* SCMuStoryTabCell.xib */,
+				036B47BB1CDDDC02005CD18F /* SCMuRelatedTabCell.h */,
+				036B47BC1CDDDC02005CD18F /* SCMuRelatedTabCell.m */,
+				036B47BE1CDDE1BA005CD18F /* SCFactoryCell.h */,
+				036B47BF1CDDE1BA005CD18F /* SCFactoryCell.m */,
+				036B47BA1CDDDBAC005CD18F /* RelatedItem */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		036B47BA1CDDDBAC005CD18F /* RelatedItem */ = {
+			isa = PBXGroup;
+			children = (
+				036AE0001CD2BF0D00F9FE54 /* SCMuListColCell.h */,
+				036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */,
+				036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */,
+			);
+			name = RelatedItem;
+			sourceTree = "<group>";
+		};
+		036B47C21CDE021C005CD18F /* RelatedDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				036B47C31CDE0268005CD18F /* SCRelatedDetailController.h */,
+				036B47C41CDE0268005CD18F /* SCRelatedDetailController.m */,
+			);
+			name = RelatedDetailVC;
 			sourceTree = "<group>";
 		};
 		03A783A81CCDC4D9005D51FC /* Classes */ = {
@@ -558,6 +644,10 @@
 				036B0D401CD182AA00D8205F /* UIImage+SCOrgImg.m */,
 				03588DAF1CD9623800230401 /* UIButton+SCExtension.h */,
 				03588DB01CD9623800230401 /* UIButton+SCExtension.m */,
+				032185871CDB289F00DBBA74 /* UIColor+SCColorExtension.h */,
+				032185881CDB289F00DBBA74 /* UIColor+SCColorExtension.m */,
+				036B47C61CDE05CF005CD18F /* UIView+SCExtent.h */,
+				036B47C71CDE05CF005CD18F /* UIView+SCExtent.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -662,6 +752,7 @@
 				03A783BD1CCDC4D9005D51FC /* Controller */,
 				03A783BE1CCDC4D9005D51FC /* Model */,
 				03A783BF1CCDC4D9005D51FC /* View */,
+				036B47C21CDE021C005CD18F /* RelatedDetailVC */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -680,6 +771,10 @@
 			children = (
 				031DB0FC1CD043570084EB1D /* SCMusicModel.h */,
 				031DB0FD1CD043570084EB1D /* SCMusicModel.m */,
+				033760691CDBC788003F860A /* SCMuDetailModel.h */,
+				0337606A1CDBC788003F860A /* SCMuDetailModel.m */,
+				033760661CDBC17E003F860A /* SCMuRelatedModel.h */,
+				033760671CDBC17E003F860A /* SCMuRelatedModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -687,12 +782,10 @@
 		03A783BF1CCDC4D9005D51FC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				03588DA31CD91E4800230401 /* SCMusicHeader.h */,
-				03588DA41CD91E4800230401 /* SCMusicHeader.m */,
-				03588DA81CD9210B00230401 /* SCMusicHeader.xib */,
-				036AE0001CD2BF0D00F9FE54 /* SCMuListColCell.h */,
-				036AE0011CD2BF0D00F9FE54 /* SCMuListColCell.m */,
-				036AE0031CD2C14B00F9FE54 /* SCMuListColCell.xib */,
+				0337606C1CDBC90C003F860A /* SCMusicCollectionCell.h */,
+				0337606D1CDBC90C003F860A /* SCMusicCollectionCell.m */,
+				036B47B71CDDCE00005CD18F /* TableViewCell */,
+				036B47B61CDDCDD3005CD18F /* HeaderView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -713,6 +806,8 @@
 			children = (
 				0362B3311CCE92E900B6E8FF /* SCReadingController.h */,
 				0362B3321CCE92E900B6E8FF /* SCReadingController.m */,
+				0377C06D1CDABE380002B953 /* SCBannerController.h */,
+				0377C06E1CDABE380002B953 /* SCBannerController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -733,6 +828,9 @@
 				036ADFEC1CD2782900F9FE54 /* SCReadTabCell.h */,
 				036ADFED1CD2782900F9FE54 /* SCReadTabCell.m */,
 				036ADFEF1CD2784000F9FE54 /* SCReadTabCell.xib */,
+				0377C07A1CDAC7490002B953 /* SCBaDetailTabCell.h */,
+				0377C07B1CDAC7490002B953 /* SCBaDetailTabCell.m */,
+				0377C07D1CDAC76F0002B953 /* SCBaDetailTabCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -934,10 +1032,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0377C07E1CDAC76F0002B953 /* SCBaDetailTabCell.xib in Resources */,
 				036ADFF51CD27B2E00F9FE54 /* SCMovieTabCell.xib in Resources */,
 				031DB0F81CD0406D0084EB1D /* SCHomeCollectionCell.xib in Resources */,
 				03709D1F1CD87D3600608917 /* SCQuDetailHeader.xib in Resources */,
 				03709D171CD877DE00608917 /* SCCommentTabCell.xib in Resources */,
+				036B47B91CDDCE6C005CD18F /* SCMuStoryTabCell.xib in Resources */,
 				03D7D9211CCD3B03003112C8 /* LaunchScreen.storyboard in Resources */,
 				03D7D91E1CCD3B03003112C8 /* Assets.xcassets in Resources */,
 				03709D2C1CD89C8D00608917 /* SCMoDetailHeader.xib in Resources */,
@@ -1026,6 +1126,7 @@
 				031DB0F31CD03D0A0084EB1D /* SCHomeModel.m in Sources */,
 				03588DA51CD91E4800230401 /* SCMusicHeader.m in Sources */,
 				03A783E31CCDEA66005D51FC /* SCBaseTableViewCell.m in Sources */,
+				036B47BD1CDDDC02005CD18F /* SCMuRelatedTabCell.m in Sources */,
 				036ADFEE1CD2782900F9FE54 /* SCReadTabCell.m in Sources */,
 				0347E7921CD3F931008E4941 /* SCPersonalController.m in Sources */,
 				03588DAC1CD95D2700230401 /* SCSectionHeader.m in Sources */,
@@ -1035,9 +1136,12 @@
 				0362B32D1CCE92BA00B6E8FF /* SCMovieController.m in Sources */,
 				03A783E01CCDEA4C005D51FC /* SCBaseCollectionCell.m in Sources */,
 				0362B3301CCE92D200B6E8FF /* SCMusicController.m in Sources */,
+				036B47C51CDE0268005CD18F /* SCRelatedDetailController.m in Sources */,
 				032725201CD4A9AD007A094A /* SCEssayModel.m in Sources */,
 				03709D151CD877B100608917 /* SCCommentTabCell.m in Sources */,
 				03588DB11CD9623800230401 /* UIButton+SCExtension.m in Sources */,
+				0377C0721CDAC1C80002B953 /* SCBannerDetailModel.m in Sources */,
+				0337606E1CDBC90C003F860A /* SCMusicCollectionCell.m in Sources */,
 				03A783D71CCDE7E8005D51FC /* SCHomeController.m in Sources */,
 				031DB0FB1CD0433C0084EB1D /* SCReadingModel.m in Sources */,
 				0327251D1CD4A995007A094A /* SCSerialModel.m in Sources */,
@@ -1046,6 +1150,7 @@
 				03709D0F1CD817B100608917 /* SCEsDetailModel.m in Sources */,
 				03709D1A1CD87CFA00608917 /* SCQuDetailHeader.m in Sources */,
 				036AE0021CD2BF0D00F9FE54 /* SCMuListColCell.m in Sources */,
+				036B47C81CDE05CF005CD18F /* UIView+SCExtent.m in Sources */,
 				031DB0F61CD0402A0084EB1D /* SCHomeCollectionCell.m in Sources */,
 				032725231CD4AC91007A094A /* SCFactoryModel.m in Sources */,
 				0362B33A1CCEE26300B6E8FF /* SCNetWorkImage.m in Sources */,
@@ -1055,10 +1160,15 @@
 				03A783C51CCDC4D9005D51FC /* main.m in Sources */,
 				03709D241CD88B0700608917 /* SCUserModel.m in Sources */,
 				03A783C41CCDC4D9005D51FC /* AppDelegate.m in Sources */,
+				036B47B51CDDCDA8005CD18F /* SCMuStoryTabCell.m in Sources */,
 				03A783DA1CCDE9AA005D51FC /* SCCusNaviController.m in Sources */,
 				0362B3331CCE92E900B6E8FF /* SCReadingController.m in Sources */,
 				031DB1011CD0436E0084EB1D /* SCMovieModel.m in Sources */,
+				032185891CDB289F00DBBA74 /* UIColor+SCColorExtension.m in Sources */,
+				0337606B1CDBC788003F860A /* SCMuDetailModel.m in Sources */,
+				036B47C01CDDE1BA005CD18F /* SCFactoryCell.m in Sources */,
 				035D8CFF1CD5E604003574DC /* SCBannerModel.m in Sources */,
+				033760681CDBC17E003F860A /* SCMuRelatedModel.m in Sources */,
 				03A783D41CCDE758005D51FC /* SCBaseModel.m in Sources */,
 				036ADFF31CD27AC600F9FE54 /* SCMovieTabCell.m in Sources */,
 				03709D0C1CD8171800608917 /* SCQuDetailModel.m in Sources */,
@@ -1071,7 +1181,9 @@
 				032725111CD4A78A007A094A /* SCAuthorModel.m in Sources */,
 				03709D121CD817DF00608917 /* SCSeDetailModel.m in Sources */,
 				0347E7951CD3F977008E4941 /* SCSearchController.m in Sources */,
+				0377C07C1CDAC7490002B953 /* SCBaDetailTabCell.m in Sources */,
 				0327251A1CD4A968007A094A /* SCQuestionModel.m in Sources */,
+				0377C06F1CDABE380002B953 /* SCBannerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

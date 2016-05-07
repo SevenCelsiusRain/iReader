@@ -19,6 +19,8 @@ NSString * const homeDetail = @"/hp/detail/%@?";
 NSString * const reading = @"/reading/index/%ld?";
 // 阅读banner
 NSString * const banner = @"/reading/carousel/?";
+// banner 点击后详情
+NSString * const bannerDetail = @"/reading/carousel/%@?";
 
 // 连载内容
 NSString * const serialContent = @"/serialcontent/%ld?";
@@ -33,7 +35,7 @@ NSString * const questionContent = @"/question/update/%ld/2016-04-29%2011:52:40?
 // 问答推荐
 NSString * const questionRelated = @"/related/question/%ld?";
 // 问答评论
-NSString * const questionComment = @"/comment/praiseandtime/question/%ld/%ld?";
+NSString * const questionComment = @"/comment/praiseandtime/question/%@/%ld?";
 
 
 // 短篇内容
@@ -41,13 +43,17 @@ NSString * const essayContent = @"/essay/%ld?";
 // 短篇推荐
 NSString * const essayRelated = @"/related/essay/%ld?";
 // 短篇评论
-NSString * const essayComment = @"/comment/praiseandtime/essay/%ld/%ld?";
+NSString * const essayComment = @"/comment/praiseandtime/essay/%@/%ld?";
 
 
 // 音乐列表
 NSString * const musicList = @"/music/idlist/0?";
 // 音乐内容
-NSString * const music = @"/music/detail/%ld?";
+NSString * const musicDetail = @"/music/detail/%@?";
+// 音乐评论
+NSString * const musicComment = @"/comment/praiseandtime/music/%@/%ld?";
+// 音乐推荐
+NSString * const musicRelated = @"/related/music/%@?";
 
 // 电影列表
 NSString * const movieList = @"/movie/list/0?";

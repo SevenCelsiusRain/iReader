@@ -7,7 +7,7 @@
 //
 
 #import "SCMusicHeader.h"
-#import "SCMusicModel.h"
+#import "SCMuDetailModel.h"
 #import "SCAuthorModel.h"
 
 @interface SCMusicHeader ()
@@ -34,7 +34,7 @@
 
 + (id)musicHeaderView {
     
-    SCMusicHeader *view = [[[NSBundle mainBundle] loadNibNamed:@"" owner:nil options:nil] lastObject];
+    SCMusicHeader *view = [[[NSBundle mainBundle] loadNibNamed:@"SCMusicHeader" owner:nil options:nil] lastObject];
     
     
     return view;
@@ -42,15 +42,15 @@
     
 }
 
-- (void)setMusicModel:(SCMusicModel *)musicModel {
+- (void)setHeaderModel:(SCMuDetailModel *)headerModel {
     
-    _musicModel = musicModel;
+    _headerModel = headerModel;
     
-    [SCNetWorkImage setImageWithImageView:self.coverImg urlStr:musicModel.cover plhImageType:PlhINillType];
-    self.titleL.text = musicModel.title;
-    self.timeL.text = musicModel.maketime;
+    [SCNetWorkImage setImageWithImageView:self.coverImg urlStr:headerModel.cover plhImageType:PlhINillType];
+    self.titleL.text = headerModel.title;
+    self.timeL.text = headerModel.maketime;
     
-    SCAuthorModel *author = musicModel.author;
+    SCAuthorModel *author = headerModel.author;
     [self.nameBtn setTitle:author.user_name forState:UIControlStateNormal];
     self.descL.text = author.desc;
     

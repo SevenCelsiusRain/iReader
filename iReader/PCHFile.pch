@@ -26,4 +26,10 @@
 // 网络请求常量类
 #import "SCNetAPI.h"
 
+// hex格式颜色转为reg格式
+#import "UIColor+SCColorExtension.h"
+
+// 获取视图所在控制器
+#import "UIView+SCExtent.h"
+
 #endif /* PCHFile_pch */

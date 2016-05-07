@@ -7,6 +7,8 @@
 //
 
 #import "SCMuListColCell.h"
+#import "SCMuRelatedModel.h"
+#import "SCAuthorModel.h"
 
 @interface SCMuListColCell ()
 
@@ -19,6 +21,18 @@
 @end
 
 @implementation SCMuListColCell
+
+
+- (void)setModel:(SCMuRelatedModel *)model {
+    
+    _model = model;
+    
+    self.titleL.text = model.title;
+    SCAuthorModel *author = model.author;
+    self.usrL.text = author.user_name;
+    [SCNetWorkImage setImageWithImageView:self.coverImg urlStr:model.cover plhImageType:PlhINillType];
+    
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
