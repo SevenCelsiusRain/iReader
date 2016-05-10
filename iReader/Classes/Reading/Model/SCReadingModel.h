@@ -28,6 +28,7 @@
 @property (nonatomic, copy) NSString<Optional> *time;
 @property (nonatomic, assign) NSInteger type;
 @property (nonatomic, strong) SCBaseContentModel<Ignore> *contentModel;
+@property (nonatomic, copy) NSString<Ignore> *requestID;
 
 + (id) cellModelWithDict:(NSDictionary *)dict;
 

@@ -6,9 +6,9 @@
 //  Copyright © 2016年 SevenCelsius. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SCReBaseHeader.h"
 
-@interface SCOtherHeader : UIView
+@interface SCOtherHeader : SCReBaseHeader
 
 + otherHeaderView;
 @end

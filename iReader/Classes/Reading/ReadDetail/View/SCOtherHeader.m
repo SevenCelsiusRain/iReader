@@ -8,6 +8,10 @@
 
 #import "SCOtherHeader.h"
 
+#import "SCAuthorModel.h"
+#import "SCEsDetailModel.h"
+#import "SCSeDetailModel.h"
+
 @interface SCOtherHeader ()
 
 @property (weak, nonatomic) IBOutlet UIButton *iconBtn;
@@ -37,10 +41,52 @@
 
 + (id)otherHeaderView {
     
-    SCOtherHeader *view = [[[NSBundle mainBundle] loadNibNamed:@"" owner:nil options:nil] lastObject];
+    SCOtherHeader *view = [[[NSBundle mainBundle] loadNibNamed:@"SCOtherHeader" owner:nil options:nil] lastObject];
     
     return view;
     
+}
+
+- (void)setModel:(SCBaseContentModel *)model {
+    
+    
+    _model = model;
+    
+   
+    NSString *time;
+    NSString *title;
+    NSString *content;
+    NSString *edt;
+    SCAuthorModel *author;
+    if (self.type == 1) {
+        
+        SCEsDetailModel *essayModel = (SCEsDetailModel *)model;
+        author = essayModel.authorModel;
+        time = essayModel.hp_makettime;
+        title = essayModel.hp_title;
+        content = essayModel.hp_content;
+        edt = essayModel.hp_author_introduce;
+        
+    }else {
+        
+        SCSeDetailModel *serialModel = (SCSeDetailModel *)model;
+        author = serialModel.authorModel;
+        time = serialModel.maketime;
+        title = serialModel.title;
+        content = serialModel.content;
+        edt = serialModel.charge_edt;
+    }
+    
+    
+    self.titleL.text = title;
+    self.timeL.text = time;
+    self.edtL.text = edt;
+    self.contentL.text = content;
+    [SCNetWorkImage setImageWithBtn:self.iconBtn urlStr:author.web_url plhImageType:PlhINillType];
+    [SCNetWorkImage setImageWithBtn:self.btoNameBtn urlStr:author.web_url plhImageType:PlhINillType];
+    self.userDescL.text = author.desc;
+    [self.userNameBtn setTitle:author.user_name forState:UIControlStateNormal];
+    [self.btoNameBtn setTitle:author.user_name forState:UIControlStateNormal];
 }
 
 - (IBAction)btnClick {

@@ -7,15 +7,24 @@
 //
 
 #import "SCReDetailController.h"
-#import "SCReadingModel.h"
+
+#import "SCReBaseHeader.h"
 #import "SCQuDetailHeader.h"
 #import "SCOtherHeader.h"
+
+#import "SCBaseTableViewCell.h"
+#import "SCCommentTabCell.h"
+#import "SCReadTabCell.h"
+
+#import "SCReadingDetailModel.h"
 
 @interface SCReDetailController ()<UITableViewDelegate, UITableViewDataSource>
 
 
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) SCReBaseHeader *headerView;
 
 @end
 
@@ -39,6 +48,19 @@
     
     if (!_dataSource) {
         
+        [SCReadingDetailModel readingDetailModelWithReadingID:self.detailID type:self.type model:^(SCReadingDetailModel *detailModel) {
+            
+            self.dataSource = @[detailModel.relatedM, detailModel.commentM];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.tableView reloadData];
+                
+                self.headerView.model = detailModel.headerModel;
+                
+            });
+            
+        }];
     }
     
     return _dataSource;
@@ -76,27 +98,104 @@
     
     self.title = title;
     
+    if (self.type == 3) {
+        
+     self.headerView = [SCQuDetailHeader quHeaderView];
+        
+    }else {
+        
+        
+        self.headerView = [SCOtherHeader otherHeaderView];
+        self.headerView.type = self.type;
+    }
+    
     [self.view addSubview:self.tableView];
 
     
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    return nil;
+    return [self getCellWithIndexPath:indexPath];
+}
+
+- (id) getCellWithIndexPath:(NSIndexPath *)indexPath {
+    
+    SCBaseTableViewCell *cell;
+    
+    NSInteger index = indexPath.section;
+    
+    NSArray *array = self.dataSource[0];
+    
+    if (array.count == 0) {
+        
+        array = self.dataSource[1];
+        SCCommentTabCell *commentCell = [SCCommentTabCell commentTabCellWithTableView:self.tableView];
+        commentCell.commentModel = array[indexPath.row];
+
+    }
+    
+    switch (index) {
+        case 0:
+        {
+            NSArray *arr = self.dataSource[index];
+            SCReadTabCell *readCell = [SCReadTabCell readCellWithTableView:self.tableView];
+            readCell.cellModel = arr[indexPath.row];
+            cell = readCell;
+            break;
+        }
+            
+        case 1:
+        {
+            NSArray *arr = self.dataSource[index];
+            SCCommentTabCell *commentCell = [SCCommentTabCell commentTabCellWithTableView:self.tableView];
+            commentCell.commentModel = arr[indexPath.row];
+            cell = commentCell;
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    return cell;
+    
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    NSArray *array = self.dataSource[section];
+    
+    return array.count;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     
     
-    return self.dataSource.count;
+    return [self sectionNumber];
 }
+
+
+- (NSUInteger)sectionNumber {
+    
+    NSUInteger num = self.dataSource.count;
+    
+    NSArray *array;
+    
+    for (int i = 1; i < self.dataSource.count; i ++) {
+        
+        array = self.dataSource[i];
+        if (array.count == 0) {
+            
+            num --;
+        }
+    }
+    
+    return num;
+}
+
 
 - (void)viewWillDisappear:(BOOL)animated {
     

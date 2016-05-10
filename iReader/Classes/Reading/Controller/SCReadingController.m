@@ -196,6 +196,7 @@
     SCCellModel *cellModel = readModel.items[indexPath.row];
 
     detailVC.type = cellModel.type;
+    detailVC.detailID = cellModel.requestID;
     
     [self.navigationController pushViewController:detailVC animated:YES];
 }

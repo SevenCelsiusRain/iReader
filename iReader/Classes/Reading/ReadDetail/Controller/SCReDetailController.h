@@ -8,10 +8,9 @@
 
 #import "SCBaseController.h"
 
-@class SCCellModel;
 @interface SCReDetailController : SCBaseController
 
-@property (nonatomic, strong) SCCellModel *reCellModel;
+@property (nonatomic, copy) NSString *detailID;
 @property (nonatomic, assign) NSInteger type;
 
 @end

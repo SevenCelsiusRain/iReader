@@ -39,7 +39,10 @@
     
     SCCellModel *model = [[SCCellModel alloc] initWithDictionary:dict error:nil];
     
-    model.contentModel = [SCFactoryModel factoryConModelWithDict:dict[@"content"] Type:model.type];
+    NSDictionary *diction = dict[@"content"];
+    
+    model.contentModel = [SCFactoryModel factoryConModelWithDict:diction Type:model.type];
+    model.requestID = model.contentModel.detailID;
     
     return model;
     

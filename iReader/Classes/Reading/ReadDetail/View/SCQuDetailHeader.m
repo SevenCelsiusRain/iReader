@@ -7,6 +7,7 @@
 //
 
 #import "SCQuDetailHeader.h"
+#import "SCQuDetailModel.h"
 
 @interface SCQuDetailHeader ()
 
@@ -35,6 +36,20 @@
     
 }
 
+
+- (void)setModel:(SCBaseContentModel *)model {
+    
+    _model = model;
+    SCQuDetailModel *quDetailModel = (SCQuDetailModel *)model;
+    
+    self.titleL.text = quDetailModel.question_title;
+    self.contentL.text = quDetailModel.question_content;
+    self.answerTitleL.text = quDetailModel.answer_title;
+    self.answerContentL.text = quDetailModel.answer_content;
+    self.titleL.text = quDetailModel.question_makettime;
+    self.edtL.text = quDetailModel.charge_edt;
+    
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

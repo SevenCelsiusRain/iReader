@@ -21,23 +21,36 @@
     
     
     SCBaseTableViewCell *cell;
+    NSInteger index = indexPath.section;
     
-//    NSArray *relatedArray = dataArray
-    switch (indexPath.section) {
+    
+        if (index != 0) {
+            
+            NSArray *relatedArray;
+            
+            relatedArray = dataArray[1];
+            if (relatedArray.count == 0) {
+                
+                relatedArray = dataArray[2];
+                if (relatedArray.count != 0) {
+                    
+                    index = 2;
+                }
+            }
+        }
+    
+    
+    switch (index) {
         case 0:{
             
             SCMuStoryTabCell *storyCell = [SCMuStoryTabCell musicStorycellWithTableView:tableView];
-            storyCell.model = dataArray[indexPath.section];
+            storyCell.model = dataArray[index];
             cell = storyCell;
             break;
         }
         case 1:{
             
-            NSArray *relatedArray = dataArray[indexPath.section];
-            if (relatedArray.count == 0) {
-                break;
-            }
-            
+            NSArray *relatedArray = dataArray[index];
             SCMuRelatedTabCell *relatedCell = [SCMuRelatedTabCell musicRelatedCellWithTableView:tableView];
             relatedCell.dataSource = relatedArray;
             cell = relatedCell;
@@ -45,10 +58,7 @@
         }
         case 2:{
             
-            NSArray *commentArray = dataArray[indexPath.section];
-            if (commentArray.count == 0) {
-                break;
-            }
+            NSArray *commentArray = dataArray[index];
             SCCommentTabCell *commentCell = [SCCommentTabCell commentTabCellWithTableView:tableView];
             commentCell.commentModel = commentArray[indexPath.row];
             cell = commentCell;

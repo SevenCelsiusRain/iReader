@@ -34,7 +34,6 @@
 
 + (id)commentTabCellWithTableView:(UITableView *)tableView {
     
-    
     return [self tableCellWithTableView:tableView];
 }
 
@@ -51,6 +50,9 @@
     [self.userNameL setTitle:user.user_name forState:UIControlStateNormal];
     [SCNetWorkImage setImageWithBtn:self.iconBtn urlStr:user.web_url plhImageType:PlhINillType];
     
+    self.iconBtn.layer.cornerRadius = 30;
+    self.iconBtn.clipsToBounds = YES;
+    self.iconBtn.contentMode = UIViewContentModeScaleAspectFill;
     
 }
 

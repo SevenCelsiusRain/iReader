@@ -14,6 +14,8 @@
     
     SCHomeModel *model = [[SCHomeModel alloc] initWithDictionary:dict error:nil];
     
+    model.hp_makettime = [model.hp_makettime substringToIndex:10];
+    
     return model;
     
 }

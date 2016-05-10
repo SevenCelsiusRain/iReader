@@ -22,20 +22,26 @@
     
     switch (type) {
         case 1:
-            
-            model = [SCEssayModel essayModelWithDict:dict];
+        {
+            SCEssayModel *essayModel = [SCEssayModel essayModelWithDict:dict];
+            model = essayModel;
+            model.detailID = essayModel.content_id;
             break;
-            
+        }
         case 2:
-            
-            model = [SCSerialModel serialModelWithDict:dict];
+        {
+            SCSerialModel *serialModel = [SCSerialModel serialModelWithDict:dict];
+            model = serialModel;
+            model.detailID = serialModel.ID;
             break;
-            
+        }
         case 3:
-            
-            model = [SCQuestionModel questionModelWithDict:dict];
+        {
+            SCQuestionModel *questionModel = [SCQuestionModel questionModelWithDict:dict];
+            model = questionModel;
+            model.detailID = questionModel.question_id;
             break;
-            
+        }
         default:
             break;
     }

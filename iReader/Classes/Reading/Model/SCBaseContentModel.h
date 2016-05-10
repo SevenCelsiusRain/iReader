@@ -10,4 +10,6 @@
 
 @interface SCBaseContentModel : JSONModel
 
+@property (nonatomic, copy) NSString<Ignore> *detailID;
+
 @end

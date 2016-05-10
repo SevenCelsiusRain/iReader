@@ -26,16 +26,12 @@
     
     if (!_dataSource) {
         
-        
-            NSMutableArray *arrayM = [[NSMutableArray alloc] initWithCapacity:0];
-        
-        
+        NSMutableArray *arrayM = [[NSMutableArray alloc] initWithCapacity:0];
         NSString *urlStr = [NSString stringWithFormat:BASE_URL, homeList];
         
         [SCNetWorkAFRequest netRequestWithURL:urlStr params:nil success:^(NSDictionary *dict) {
             
             self.arrayHPList = dict[@"data"];
-            
             
             for (int i = 0; i < self.arrayHPList.count; i++) {
                 
@@ -65,7 +61,6 @@
             
         } isGet:YES];
 
-        
             _dataSource = arrayM;
 
     }
@@ -74,6 +69,7 @@
     
 }
 
+// 懒加载实现collectionView的构建
 - (UICollectionView *)collectionView {
     
     if (!_collectionView) {
@@ -107,9 +103,6 @@
 
 
 - (void) initView {
-    
-    
-    
     
     [self.view addSubview:self.collectionView];
     NSString *className = NSStringFromClass([SCHomeCollectionCell class]);

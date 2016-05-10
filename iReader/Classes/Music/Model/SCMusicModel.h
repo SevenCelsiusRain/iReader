@@ -12,7 +12,7 @@
 @interface SCMusicModel : SCBaseModel
 
 @property (nonatomic, copy) NSString<Ignore> *musicID;
-@property (nonatomic, copy) SCMuDetailModel<Ignore> *detailModel;
+@property (nonatomic, strong) SCMuDetailModel<Ignore> *detailModel;
 @property (nonatomic, strong) NSMutableArray<Ignore> *relatedArrayM;
 @property (nonatomic, strong) NSMutableArray<Ignore> *commentArrayM;
 

@@ -23,25 +23,25 @@ NSString * const banner = @"/reading/carousel/?";
 NSString * const bannerDetail = @"/reading/carousel/%@?";
 
 // 连载内容
-NSString * const serialContent = @"/serialcontent/%ld?";
+NSString * const serialContent = @"/serialcontent/%@?";
 // 连载推荐
-NSString * const serialRelated = @"/related/serial/%ld?";
+NSString * const serialRelated = @"/related/serial/%@?";
 // 连载评论
-NSString * const serialComment = @"/comment/praiseandtime/serial/%ld/%ld?";
+NSString * const serialComment = @"/comment/praiseandtime/serial/%@/%ld?";
 
 
 // 问答内容
-NSString * const questionContent = @"/question/update/%ld/2016-04-29%2011:52:40?";
+NSString * const questionContent = @"/question/update/%@/0?";
 // 问答推荐
-NSString * const questionRelated = @"/related/question/%ld?";
+NSString * const questionRelated = @"/related/question/%@?";
 // 问答评论
 NSString * const questionComment = @"/comment/praiseandtime/question/%@/%ld?";
 
 
 // 短篇内容
-NSString * const essayContent = @"/essay/%ld?";
+NSString * const essayContent = @"/essay/%@?";
 // 短篇推荐
-NSString * const essayRelated = @"/related/essay/%ld?";
+NSString * const essayRelated = @"/related/essay/%@?";
 // 短篇评论
 NSString * const essayComment = @"/comment/praiseandtime/essay/%@/%ld?";
 

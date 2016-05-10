@@ -11,7 +11,6 @@
 #import "SCReadingController.h"
 #import "SCMusicController.h"
 #import "SCMovieController.h"
-
 #import "SCCusNaviController.h"
 
 @interface SCCusTabBarController ()

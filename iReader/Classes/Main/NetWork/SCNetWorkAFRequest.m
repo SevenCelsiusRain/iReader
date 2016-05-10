@@ -17,7 +17,6 @@
     NetWorkState appState;
     
     // 获取网络状态
-    
     Reachability *rea = [Reachability reachabilityWithHostName:@"www.baidu.com"];
     NetworkStatus status = [rea currentReachabilityStatus];
     
@@ -38,10 +37,11 @@
     return appState;
 }
 /***
- 网络请求求数据
+ 网络请求数据
  */
 + (void)netRequestWithURL:(NSString *)urlStr params:(NSDictionary *)params success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure isGet:(BOOL)isGet{
     
+    // 判断网络状态
     if ([self isNetWorkReach] == NetWorkState_None) {
         if (failure) {
             failure(nil);
@@ -91,9 +91,6 @@
         }];
         
     }
-    
-    
-    
 }
 
 @end

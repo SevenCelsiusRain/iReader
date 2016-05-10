@@ -6,9 +6,9 @@
 //  Copyright © 2016年 SevenCelsius. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SCReBaseHeader.h"
 
-@interface SCQuDetailHeader : UIView
+@interface SCQuDetailHeader : SCReBaseHeader
 
 + (id)quHeaderView;
 

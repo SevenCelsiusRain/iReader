@@ -23,10 +23,10 @@
 
 @implementation SCMovieController
 
+// 懒加载tableView
 - (UITableView *)tableView {
     
     if (!_tableView) {
-        
         
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     }
@@ -82,14 +82,13 @@
     
 }
 
+// 初始化视图
 - (void) initView {
-    
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
-    
     
 }
 

@@ -28,6 +28,9 @@
 		033760681CDBC17E003F860A /* SCMuRelatedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 033760671CDBC17E003F860A /* SCMuRelatedModel.m */; };
 		0337606B1CDBC788003F860A /* SCMuDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0337606A1CDBC788003F860A /* SCMuDetailModel.m */; };
 		0337606E1CDBC90C003F860A /* SCMusicCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0337606D1CDBC90C003F860A /* SCMusicCollectionCell.m */; };
+		03439E771CDFFD1C008756F6 /* SCReFactoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03439E761CDFFD1C008756F6 /* SCReFactoryModel.m */; };
+		03439E7A1CDFFF09008756F6 /* SCReadingDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03439E791CDFFF09008756F6 /* SCReadingDetailModel.m */; };
+		03439E7D1CE00894008756F6 /* SCReBaseHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03439E7C1CE00894008756F6 /* SCReBaseHeader.m */; };
 		0347E7921CD3F931008E4941 /* SCPersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0347E7911CD3F931008E4941 /* SCPersonalController.m */; };
 		0347E7951CD3F977008E4941 /* SCSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0347E7941CD3F977008E4941 /* SCSearchController.m */; };
 		03588DA51CD91E4800230401 /* SCMusicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03588DA41CD91E4800230401 /* SCMusicHeader.m */; };
@@ -151,6 +154,12 @@
 		0337606A1CDBC788003F860A /* SCMuDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMuDetailModel.m; sourceTree = "<group>"; };
 		0337606C1CDBC90C003F860A /* SCMusicCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCMusicCollectionCell.h; sourceTree = "<group>"; };
 		0337606D1CDBC90C003F860A /* SCMusicCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMusicCollectionCell.m; sourceTree = "<group>"; };
+		03439E751CDFFD1C008756F6 /* SCReFactoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCReFactoryModel.h; sourceTree = "<group>"; };
+		03439E761CDFFD1C008756F6 /* SCReFactoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCReFactoryModel.m; sourceTree = "<group>"; };
+		03439E781CDFFF09008756F6 /* SCReadingDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCReadingDetailModel.h; sourceTree = "<group>"; };
+		03439E791CDFFF09008756F6 /* SCReadingDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCReadingDetailModel.m; sourceTree = "<group>"; };
+		03439E7B1CE00894008756F6 /* SCReBaseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCReBaseHeader.h; sourceTree = "<group>"; };
+		03439E7C1CE00894008756F6 /* SCReBaseHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCReBaseHeader.m; sourceTree = "<group>"; };
 		0347E7901CD3F931008E4941 /* SCPersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPersonalController.h; sourceTree = "<group>"; };
 		0347E7911CD3F931008E4941 /* SCPersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPersonalController.m; sourceTree = "<group>"; };
 		0347E7931CD3F977008E4941 /* SCSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSearchController.h; sourceTree = "<group>"; };
@@ -378,12 +387,16 @@
 		0327250A1CD489D7007A094A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				03439E781CDFFF09008756F6 /* SCReadingDetailModel.h */,
+				03439E791CDFFF09008756F6 /* SCReadingDetailModel.m */,
 				03709D0D1CD817B100608917 /* SCEsDetailModel.h */,
 				03709D0E1CD817B100608917 /* SCEsDetailModel.m */,
 				03709D101CD817DF00608917 /* SCSeDetailModel.h */,
 				03709D111CD817DF00608917 /* SCSeDetailModel.m */,
 				03709D0A1CD8171800608917 /* SCQuDetailModel.h */,
 				03709D0B1CD8171800608917 /* SCQuDetailModel.m */,
+				03439E751CDFFD1C008756F6 /* SCReFactoryModel.h */,
+				03439E761CDFFD1C008756F6 /* SCReFactoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +410,8 @@
 				03709D1B1CD87D1A00608917 /* SCOtherHeader.h */,
 				03709D1C1CD87D1A00608917 /* SCOtherHeader.m */,
 				03709D201CD8832800608917 /* SCOtherHeader.xib */,
+				03439E7B1CE00894008756F6 /* SCReBaseHeader.h */,
+				03439E7C1CE00894008756F6 /* SCReBaseHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1147,8 +1162,10 @@
 				0327251D1CD4A995007A094A /* SCSerialModel.m in Sources */,
 				03709D271CD88B8E00608917 /* SCCommentModel.m in Sources */,
 				03A783DD1CCDEA08005D51FC /* SCCusTabBarController.m in Sources */,
+				03439E7D1CE00894008756F6 /* SCReBaseHeader.m in Sources */,
 				03709D0F1CD817B100608917 /* SCEsDetailModel.m in Sources */,
 				03709D1A1CD87CFA00608917 /* SCQuDetailHeader.m in Sources */,
+				03439E771CDFFD1C008756F6 /* SCReFactoryModel.m in Sources */,
 				036AE0021CD2BF0D00F9FE54 /* SCMuListColCell.m in Sources */,
 				036B47C81CDE05CF005CD18F /* UIView+SCExtent.m in Sources */,
 				031DB0F61CD0402A0084EB1D /* SCHomeCollectionCell.m in Sources */,
@@ -1182,6 +1199,7 @@
 				03709D121CD817DF00608917 /* SCSeDetailModel.m in Sources */,
 				0347E7951CD3F977008E4941 /* SCSearchController.m in Sources */,
 				0377C07C1CDAC7490002B953 /* SCBaDetailTabCell.m in Sources */,
+				03439E7A1CDFFF09008756F6 /* SCReadingDetailModel.m in Sources */,
 				0327251A1CD4A968007A094A /* SCQuestionModel.m in Sources */,
 				0377C06F1CDABE380002B953 /* SCBannerController.m in Sources */,
 			);

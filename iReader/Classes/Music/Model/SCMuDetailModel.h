@@ -44,7 +44,7 @@
 @property (nonatomic, assign) NSInteger sharenum;
 @property (nonatomic, assign) NSInteger commentnum;
 
-@property (nonatomic, copy) SCAuthorModel<Ignore> *author;
+@property (nonatomic, strong) SCAuthorModel<Ignore> *author;
 
 + (id)musicDetailModelWithDict:(NSDictionary *)dict;
 
