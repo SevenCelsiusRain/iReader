@@ -58,6 +58,10 @@ NSString * const musicRelated = @"/related/music/%@?";
 // 电影列表
 NSString * const movieList = @"/movie/list/0?";
 // 电影内容
-NSString  * const movie = @"/movie/detail/50?";
+NSString  * const movieDetail = @"/movie/detail/%@?";
+// 电影故事
+NSString * const movieStory = @"/movie/%@/story/1/0?";
+// 电影评论
+NSString * const movieComment = @"/comment/praiseandtime/movie/%@/%ld?";
 
 @end

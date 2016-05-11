@@ -65,6 +65,13 @@
                 [self.relatedArrayM addObject:relatedModel];
             }
             
+            if (self.detailModel && (self.commentArrayM.count!=0)) {
+                
+                if (self.block) {
+                    
+                    self.block(self);
+                }
+            }
             
         } failure:^(NSError *error) {
             
@@ -82,10 +89,15 @@
                 [self.commentArrayM addObject:commentModel];
             }
             
-            if (self.block) {
+            if (self.detailModel) {
                 
-                self.block(self);
+                if (self.block) {
+                    
+                    self.block(self);
+                }
+
             }
+            
             
         } failure:^(NSError *error) {
             

@@ -10,4 +10,6 @@
 
 @interface SCMovieDetailController : SCBaseController
 
+@property (nonatomic, copy) NSString *ID;
+
 @end

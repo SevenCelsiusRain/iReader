@@ -61,6 +61,7 @@
     
     [self.contentView addSubview:self.collectionView];
     
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     NSString *className = NSStringFromClass([SCMuListColCell class]);
     [self.collectionView registerNib:[UINib nibWithNibName:className bundle:nil] forCellWithReuseIdentifier:className];
     
@@ -70,6 +71,7 @@
     
     SCMuListColCell *listCell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SCMuListColCell class]) forIndexPath:indexPath];
     
+    listCell.contentView.backgroundColor = [UIColor whiteColor];
     listCell.model = self.dataSource[indexPath.row];
     
     return listCell;

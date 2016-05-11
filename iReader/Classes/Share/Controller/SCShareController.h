@@ -1,5 +1,5 @@
 //
-//  SCPersonalController.h
+//  SCShareController.h
 //  iReader
 //
 //  Created by SevenCelsius on 16/5/10.
@@ -8,6 +8,6 @@
 
 #import "SCBaseController.h"
 
-@interface SCPersonalController : SCBaseController
+@interface SCShareController : SCBaseController
 
 @end

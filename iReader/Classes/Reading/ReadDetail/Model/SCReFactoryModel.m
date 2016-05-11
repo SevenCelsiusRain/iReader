@@ -9,6 +9,9 @@
 #import "SCReFactoryModel.h"
 #import "SCBaseContentModel.h"
 
+#import "SCEsDetailModel.h"
+#import "SCSeDetailModel.h"
+#import "SCQuDetailModel.h"
 
 @implementation SCReFactoryModel
 
@@ -16,6 +19,33 @@
     
     SCBaseContentModel *model;
     
+    
+    switch (type) {
+            
+        case 1:
+        {
+            SCEsDetailModel * essayModel = [SCEsDetailModel esDetailModelWithDict:dict];
+            model = essayModel;
+            break;
+        }
+            
+        case 2:
+        {
+            SCSeDetailModel *serailModel = [SCSeDetailModel seDetailModelWithDict:dict];
+            model = serailModel;
+            break;
+        }
+
+        case 3:
+        {
+            SCQuDetailModel *questionModle = [SCQuDetailModel quDetailModelWithDict:dict];
+            model = questionModle;
+            break;
+        }
+
+        default:
+            break;
+    }
     
     return model;
     

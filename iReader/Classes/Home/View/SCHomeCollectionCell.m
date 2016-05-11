@@ -9,6 +9,8 @@
 #import "SCHomeCollectionCell.h"
 #import "SCHomeModel.h"
 
+#import "SCShareController.h"
+
 @interface SCHomeCollectionCell ()
 
 // 标题
@@ -69,7 +71,7 @@
         self.praiseBtn.selected = NO;
     }else {
         
-        self.praiseBtn.selected = NO;
+        self.praiseBtn.selected = YES;
     }
     
 }
@@ -79,6 +81,9 @@
 
 // 分享
 - (IBAction)shareBtnClick {
+    
+    SCShareController *shareVC = [[SCShareController alloc] init];
+    [self.viewController.navigationController pushViewController:shareVC animated:YES];
 }
 
 

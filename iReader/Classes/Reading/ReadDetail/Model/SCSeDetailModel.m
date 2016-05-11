@@ -15,6 +15,7 @@
     
     SCSeDetailModel *model = [[SCSeDetailModel alloc] initWithDictionary:dict error:nil];
     
+    model.maketime = [model.maketime substringToIndex:10];
     model.authorModel = [SCAuthorModel authorModelWithDict:dict[@"author"]];
     model.ID = dict[@"id"];
     

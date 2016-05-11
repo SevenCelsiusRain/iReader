@@ -46,7 +46,7 @@
     self.contentL.text = quDetailModel.question_content;
     self.answerTitleL.text = quDetailModel.answer_title;
     self.answerContentL.text = quDetailModel.answer_content;
-    self.titleL.text = quDetailModel.question_makettime;
+    self.timeL.text = quDetailModel.question_makettime;
     self.edtL.text = quDetailModel.charge_edt;
     
 }

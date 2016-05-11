@@ -16,6 +16,7 @@
     SCEsDetailModel *model = [[SCEsDetailModel alloc] initWithDictionary:dict error:nil];
     model.authorModel = [SCAuthorModel authorModelWithDict:dict[@"author"]];
     
+    model.hp_makettime = [model.hp_makettime substringToIndex:10];
     return model;
 }
 

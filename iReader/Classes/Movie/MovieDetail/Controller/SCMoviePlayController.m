@@ -1,22 +1,22 @@
 //
-//  SCSearchController.m
+//  SCMoviePlayController.m
 //  iReader
 //
-//  Created by SevenCelsius on 16/5/10.
+//  Created by SevenCelsius on 16/5/11.
 //  Copyright © 2016年 SevenCelsius. All rights reserved.
 //
 
-#import "SCSearchController.h"
+#import "SCMoviePlayController.h"
 
-@interface SCSearchController ()
+@interface SCMoviePlayController ()
 
 @end
 
-@implementation SCSearchController
+@implementation SCMoviePlayController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

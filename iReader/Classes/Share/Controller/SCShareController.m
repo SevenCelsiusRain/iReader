@@ -1,18 +1,18 @@
 //
-//  SCSearchController.m
+//  SCShareController.m
 //  iReader
 //
 //  Created by SevenCelsius on 16/5/10.
 //  Copyright © 2016年 SevenCelsius. All rights reserved.
 //
 
-#import "SCSearchController.h"
+#import "SCShareController.h"
 
-@interface SCSearchController ()
+@interface SCShareController ()
 
 @end
 
-@implementation SCSearchController
+@implementation SCShareController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

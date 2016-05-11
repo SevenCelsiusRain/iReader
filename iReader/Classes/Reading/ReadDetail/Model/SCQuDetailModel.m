@@ -15,6 +15,7 @@
     
     SCQuDetailModel *model = [[SCQuDetailModel alloc] initWithDictionary:dict error:nil];
     
+    model.question_makettime = [model.question_makettime substringToIndex:10];
     return model;
     
 }

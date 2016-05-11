@@ -58,6 +58,10 @@ extern NSString * const musicRelated;
 extern NSString * const movieList;
 // 电影内容
 extern NSString * const movieDetail;
+// 电影故事
+extern NSString * const movieStory;
+// 电影评论
+extern NSString * const movieComment;
 
 
 @end

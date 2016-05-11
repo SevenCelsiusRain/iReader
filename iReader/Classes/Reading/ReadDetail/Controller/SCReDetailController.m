@@ -50,7 +50,7 @@
         
         [SCReadingDetailModel readingDetailModelWithReadingID:self.detailID type:self.type model:^(SCReadingDetailModel *detailModel) {
             
-            self.dataSource = @[detailModel.relatedM, detailModel.commentM];
+            self.dataSource = detailModel.commentM;
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -88,7 +88,7 @@
         
     }
     
-    self.navigationController.toolbarHidden = NO;
+//    self.navigationController.toolbarHidden = NO;
     
     UIBarButtonItem *praise = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"laud_pressed"] style:UIBarButtonItemStyleDone target:self action:nil];
     UIBarButtonItem *comment = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"comment_image"] style:UIBarButtonItemStyleDone target:self action:nil];
@@ -109,6 +109,7 @@
         self.headerView.type = self.type;
     }
     
+    self.tableView.tableHeaderView = self.headerView;
     [self.view addSubview:self.tableView];
 
     
@@ -117,90 +118,27 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    return [self getCellWithIndexPath:indexPath];
-}
-
-- (id) getCellWithIndexPath:(NSIndexPath *)indexPath {
-    
-    SCBaseTableViewCell *cell;
-    
-    NSInteger index = indexPath.section;
-    
-    NSArray *array = self.dataSource[0];
-    
-    if (array.count == 0) {
-        
-        array = self.dataSource[1];
-        SCCommentTabCell *commentCell = [SCCommentTabCell commentTabCellWithTableView:self.tableView];
-        commentCell.commentModel = array[indexPath.row];
-
-    }
-    
-    switch (index) {
-        case 0:
-        {
-            NSArray *arr = self.dataSource[index];
-            SCReadTabCell *readCell = [SCReadTabCell readCellWithTableView:self.tableView];
-            readCell.cellModel = arr[indexPath.row];
-            cell = readCell;
-            break;
-        }
-            
-        case 1:
-        {
-            NSArray *arr = self.dataSource[index];
-            SCCommentTabCell *commentCell = [SCCommentTabCell commentTabCellWithTableView:self.tableView];
-            commentCell.commentModel = arr[indexPath.row];
-            cell = commentCell;
-            break;
-        }
-            
-        default:
-            break;
-    }
-    
-    return cell;
-    
+    SCCommentTabCell *commentCell = [SCCommentTabCell commentTabCellWithTableView:self.tableView];
+    commentCell.commentModel = self.dataSource[indexPath.row];
+    return commentCell;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSArray *array = self.dataSource[section];
     
-    return array.count;
+    return self.dataSource.count;
 }
 
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    return [self sectionNumber];
+    return 200;
 }
-
-
-- (NSUInteger)sectionNumber {
-    
-    NSUInteger num = self.dataSource.count;
-    
-    NSArray *array;
-    
-    for (int i = 1; i < self.dataSource.count; i ++) {
-        
-        array = self.dataSource[i];
-        if (array.count == 0) {
-            
-            num --;
-        }
-    }
-    
-    return num;
-}
-
 
 - (void)viewWillDisappear:(BOOL)animated {
     
     
-    self.navigationController.toolbarHidden = YES;
+//    self.navigationController.toolbarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {

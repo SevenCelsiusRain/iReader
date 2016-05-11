@@ -7,11 +7,20 @@
 //
 
 #import "SCMovieDetailController.h"
+#import "SCMoviePlayController.h"
+
+#import "SCMoDetailHeader.h"
+#import "SCModetailCell.h"
+#import "SCCommentTabCell.h"
+
+#import "SCDetailMovieModel.h"
 
 @interface SCMovieDetailController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *dataSource;
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) SCMoDetailHeader *headerView;
 
 @end
 
@@ -37,28 +46,72 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self initData];
+    [self initView];
+    
 }
 
 - (void)initView {
     
+    self.headerView = [SCMoDetailHeader movieDetailHeaderView];
+    self.tableView.tableHeaderView = self.headerView;
     [self.view addSubview:self.tableView];
+    
+}
+
+- (void) initData {
+    
+    [SCDetailMovieModel movieDetailModelWithMovieID:self.ID detailMovieModel:^(SCDetailMovieModel *movieModel) {
+       
+        self.dataSource = @[movieModel.storyModel, movieModel.commentM];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.tableView reloadData];
+            self.headerView.model = movieModel.headerModel;
+        });
+        
+    }];
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.row == 1) {
+        
+        SCCommentTabCell * commentCell = [SCCommentTabCell commentTabCellWithTableView:tableView];
+        
+    }
     
-    return nil;
+    SCModetailCell *cell = [SCModetailCell movieDetailCellWithTableView:tableView];
+    cell.storyModel = self.dataSource[indexPath.row];
+    return cell;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    if (section == 1) {
+        
+        NSArray *array = self.dataSource[section];
+        return array.count;
+    }
+    
+    return 1;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 3;
+    return 2;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SCMoviePlayController *playerVC = [[SCMoviePlayController alloc] init];
+    
+    
+    [self.navigationController pushViewController:playerVC animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
